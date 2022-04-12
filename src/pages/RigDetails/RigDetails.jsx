@@ -9,11 +9,11 @@ import { getOne, assocGuitar } from '../../services/rigs'
 import RigActions from './components/RigActions'
 import GuitarCollection from './components/GuitarCollection'
 
-const RigDetails = ({ catImages, user }) => {
+const RigDetails = ({ gearImages, user }) => {
   const { id } = useParams()
   const [rig, setRig] = useState(null)
   const [availableGuitars, setAvailableGuitars] = useState([])
-  const idx = Math.floor(Math.random() * (catImages.length))
+  const idx = Math.floor(Math.random() * (gearImages.length))
 
   const addToCollection = async (e) => {
     e.preventDefault()
@@ -39,7 +39,7 @@ const RigDetails = ({ catImages, user }) => {
     <>
       <section className="rig-container">
         <div className="rig-img">
-          <img className="usr-img" src={catImages[idx]} alt={`${rig.name}`} />
+          <img className="usr-img" src={gearImages[idx]} alt={`${rig.name}`} />
         </div>
         <div className="rig-details">
           <h1>{rig.name}</h1>
@@ -57,7 +57,7 @@ const RigDetails = ({ catImages, user }) => {
           user={user}
           guitars={availableGuitars}
           addToCollection={addToCollection}
-        /> */}
+        /> 
       </div>
     </>
   )

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import '../../styles/Form.css'
 
 // Services
 import { getOne } from '../../services/rigs'
@@ -10,7 +9,7 @@ import { getOne } from '../../services/rigs'
 import RigInput from './RigInput'
 
 // Image Assets
-import NerdCat from '../../assets/nerd-cat.svg'
+import AmpCombo from '../../assets/amp-combo.png'
 
 const RigForm = (props) => {
   const { id } = useParams()
@@ -45,7 +44,7 @@ const RigForm = (props) => {
       <div className="page-header">
         {id
           ? <h1>Edit Rig</h1>
-          : <><h1>Add Rig</h1><img src={NerdCat} alt="A cat using a computer" /></>
+          : <><h1>Add Rig</h1><img src={AmpCombo} alt="A combo amp" /></>
         }
       </div>
 
