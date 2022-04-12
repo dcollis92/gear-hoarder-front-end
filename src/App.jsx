@@ -11,14 +11,17 @@ import RigForm from './pages/Forms/RigForm'
 import RigList from './pages/RigList/RigList'
 import RigDetails from './pages/RigDetails/RigDetails'
 import RigConfirmation from './pages/Confirmation/RigConfirmation'
-import AmpConfirmation from './pages/Confirmation/AmpConfirmation'
-import GuitarConfirmation from './pages/Confirmation/GuitarConfirmation'
-import PedalConfirmation from './pages/Confirmation/PedalConfirmation'
+// import AmpConfirmation from './pages/Confirmation/AmpConfirmation'
+// import GuitarConfirmation from './pages/Confirmation/GuitarConfirmation'
+// import PedalConfirmation from './pages/Confirmation/PedalConfirmation'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 // Services
 import * as authService from './services/authService'
 import * as rigService from './services/rigs'
+import * as ampService from './services/amps'
+import * as guitarService from './services/guitars'
+import * as pedalService from './services/pedals'
 
 // Image Assets
 import AmpCombo from './assets/amp-combo.png'
@@ -42,6 +45,9 @@ import BigMuffPedal from './assets/pedal-4.png'
 const App = () => {
   const navigate = useNavigate()
   const [rigs, setRigs] = useState([])
+  const [amps, setAmps] = useState([])
+  const [guitars, setGuitars] = useState([])
+  const [pedals, setPedals] = useState([])
   const [user, setUser] = useState(authService.getUser())
   console.log(user)
 
@@ -60,6 +66,21 @@ const App = () => {
   const addRig = async (rigData) => {
     const rig = await rigService.create(rigData)
     setRigs([...rigs, rig])
+  }
+
+  const addAmp = async (ampData) => {
+    const amp = await ampService.create(ampData)
+    setAmps([...amps, amp])
+  }
+
+  const addGuitar = async (guitarData) => {
+    const guitar = await guitarService.create(guitarData)
+    setGuitars([...guitars, guitar])
+  }
+
+  const addPedal = async (pedalData) => {
+    const pedal = await pedalService.create(pedalData)
+    setPedals([...pedals, pedal])
   }
 
   const updateRig = async (rigData) => {
@@ -109,6 +130,30 @@ const App = () => {
               />
             </ProtectedRoute>
           } />
+        {/* <Route path="/amps" element={
+            <ProtectedRoute user={user}>
+              <AmpList 
+                amps={amps} 
+                gearImages={gearImages} 
+              />
+            </ProtectedRoute>
+          } /> */}
+        {/* <Route path="/guitars" element={
+            <ProtectedRoute user={user}>
+              <GuitarList 
+                guitars={guitars} 
+                gearImages={gearImages} 
+              />
+            </ProtectedRoute>
+          } /> */}
+        {/* <Route path="/pedals" element={
+            <ProtectedRoute user={user}>
+              <PedalList 
+                pedals={amps} 
+                gearImages={gearImages} 
+              />
+            </ProtectedRoute>
+          } /> */}
         <Route path="/rigs/:id" element={
           <ProtectedRoute user={user}>
             <RigDetails 
