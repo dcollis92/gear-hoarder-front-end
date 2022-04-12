@@ -1,9 +1,10 @@
 import './GuitarList.css'
 
 // Image Assets
-import Explorer from '../../assets/guitar-explorer.png'
-import LesPaul from '../../assets/guitar-lespaul.png'
-import Strat from '../../assets/guitar-strat.png'
+import GuitarExplorer from '../../assets/guitar-explorer.png'
+import GibsonLesPaul from '../../assets/guitar-lespaul.png'
+import GuitarStrat from '../../assets/guitar-strat.png'
+import GuitarSG from '../../assets/guitar-sg.png'
 
 // Components
 import GuitarCard from '../../components/GuitarCard/GuitarCard'
@@ -13,9 +14,10 @@ const GuitarList = (props) => {
     <>
       <section className="page-header">
         <h1>Guitar List</h1>
-        <img src={Explorer} alt="a gibson explorer" />
-        <img src={LesPaul} alt="a gibson les paul" />
-        <img src={Strat} alt="a fender strat" />
+        <img src={GuitarExplorer} alt="a gibson explorer" />
+        <img src={GibsonLesPaul} alt="a gibson les paul" />
+        <img src={GuitarStrat} alt="a fender strat" />
+        <img src={GuitarSG} alt="a gibson sg" />
       </section>
       <section className="guitar-card-container">
         {props.guitars.map((guitar) => (
