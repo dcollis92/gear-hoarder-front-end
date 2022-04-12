@@ -27,6 +27,7 @@ const RigDetails = ({ catImages, user }) => {
     const fetchOne = async () => {
       const data = await getOne(id)
       setRig(data.rig)
+      // setAvailableAmps(data.available_amps)
       setAvailableGuitars(data.available_guitars)
     }
     fetchOne()
@@ -56,7 +57,7 @@ const RigDetails = ({ catImages, user }) => {
           user={user}
           guitars={availableGuitars}
           addToCollection={addToCollection}
-        />
+        /> */}
       </div>
     </>
   )

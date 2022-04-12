@@ -1,17 +1,16 @@
 import { useNavigate, useLocation, useParams, Link } from 'react-router-dom'
 
 // Image Assets
-import NerdCat from '../../assets/nerd-cat.svg'
 
-const Confirmation = (props) => {
+
+const RigConfirmation = (props) => {
   const { id } = useParams()
   const { state } = useLocation()
   const navigate = useNavigate()
-  const resource = props.deleteRig ? 'rigs' : 'toys'
+  const resource = props.deleteRig
 
   const handleDelete = () => {
-    props.deleteRig && props.deleteRig(id)
-    props.deleteToy && props.deleteToy(id)
+    props.deleteRig && props.deleteRig(id)    
     navigate(`/${resource}`)
   }
 
@@ -19,7 +18,7 @@ const Confirmation = (props) => {
     <>
       <div className="page-header">
         <h1>Delete Confirmation</h1>
-        <img src={NerdCat} alt="A cat using a computer" />
+        {/* <img src={} alt="" /> */}
       </div>
       <section className="confirmation">
         <h2>Are you sure you want to delete {state?.name}?</h2>
@@ -30,4 +29,4 @@ const Confirmation = (props) => {
   )
 }
 
-export default Confirmation
+export default RigConfirmation
