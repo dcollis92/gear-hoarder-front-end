@@ -7,7 +7,7 @@ import { getOne, assocGuitar } from '../../services/rigs'
 
 // Components
 import RigActions from './components/RigActions'
-import GuitarCollection from './components/GuitarCollection'
+// import GuitarCollection from './components/GuitarCollection'
 
 const RigDetails = ({ gearImages, user }) => {
   const { id } = useParams()
@@ -43,22 +43,25 @@ const RigDetails = ({ gearImages, user }) => {
         </div>
         <div className="rig-details">
           <h1>{rig.name}</h1>
-          {/* {rig.age > 0
-            ? <h2>A {rig.age} year old {rig.breed}</h2>
-            : <h2>A {rig.breed} kitten.</h2>
+          {/* 
+
+              <h2> {rig.id} </h2>
+              
+
           } */}
           <p>{rig.description}</p>
           <RigActions rig={rig} user={user} />
         </div>
-      </section>
-      <div className="guitar-container">
+      </section> 
+      {/* - display rig -  */}
+      {/* <div className="guitar-container">
         <GuitarCollection
           rig={rig}
           user={user}
           guitars={availableGuitars}
           addToCollection={addToCollection}
         /> 
-      </div>
+      </div> */}
     </>
   )
 }
