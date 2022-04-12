@@ -7,27 +7,27 @@ import { getOne, assocToy } from '../../services/rigs'
 
 // Components
 import RigActions from './components/RigActions'
-import ToyCollection from './components/ToyCollection'
+// import ToyCollection from './components/ToyCollection'
 
 const RigDetails = ({ catImages, user }) => {
   const { id } = useParams()
   const [rig, setRig] = useState(null)
-  const [availableToys, setAvailableToys] = useState([])
+  // const [availableToys, setAvailableToys] = useState([])
   const idx = Math.floor(Math.random() * (catImages.length))
 
   const addToCollection = async (e) => {
     e.preventDefault()
-    const toyId = parseInt(e.target.id)
-    const updatedRig = await assocToy(rig.id, toyId)
-    setAvailableToys(availableToys.filter(toy => toyId !== toy.id))
-    setRig({...updatedRig})
+    // const toyId = parseInt(e.target.id)
+    // const updatedRig = await assocToy(rig.id, toyId)
+    // setAvailableToys(availableToys.filter(toy => toyId !== toy.id))
+    // setRig({...updatedRig})
   }
 
   useEffect(() => {
     const fetchOne = async () => {
       const data = await getOne(id)
       setRig(data.rig)
-      setAvailableToys(data.available_toys)
+      // setAvailableAmps(data.available_amps)
     }
     fetchOne()
   }, [id])
@@ -51,12 +51,12 @@ const RigDetails = ({ catImages, user }) => {
         </div>
       </section>
       <div className="toy-container">
-        <ToyCollection
+        {/* <ToyCollection
           rig={rig}
           user={user}
           toys={availableToys}
           addToCollection={addToCollection}
-        />
+        /> */}
       </div>
     </>
   )
