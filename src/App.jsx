@@ -9,8 +9,8 @@ import Profiles from './pages/Profiles/Profiles'
 // Components
 import RigForm from './pages/Forms/RigForm'
 import RigList from './pages/RigList/RigList'
-// import RigDetails from '../pages/RigDetails/RigDetails'
-// import Confirmation from '../pages/Confirmation/Confirmation'
+import RigDetails from './pages/RigDetails/RigDetails'
+import Confirmation from './pages/Confirmation/Confirmation'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 // Services
@@ -34,6 +34,18 @@ const App = () => {
   const addRig = async (rigData) => {
     const rig = await rigService.create(rigData)
     setRigs([...rigs, rig])
+  }
+
+  const updateRig = async (rigData) => {
+    const updatedRig = await rigService.update(rigData)
+    setRigs(rigs.map((rig) => (
+      rig.id === updatedRig.id ? updatedRig : rig
+    )))
+  }
+
+  const deleteRig = async (id) => {
+    await rigService.deleteOne(id)
+    setRigs(rigs.filter(rig => rig.id !== parseInt(id)))
   }
 
   const handleLogout = () => {
@@ -71,9 +83,28 @@ const App = () => {
               />
             </ProtectedRoute>
           } />
+        <Route path="/rigs/:id" element={
+          <ProtectedRoute user={user}>
+            <RigDetails 
+              // catImages={catImages} 
+              user={user} />
+          </ProtectedRoute>
+        } />
         <Route path="/rigs/new" element={
           <ProtectedRoute user={user}>
-            <RigForm addRig={addRig} user={user} />
+            <RigForm 
+            addRig={addRig} 
+            user={user} />
+          </ProtectedRoute>
+        } />
+        <Route path="/rigs/:id/edit" element={
+          <ProtectedRoute user={user}>
+            <RigForm rigs={rigs} updateRig={updateRig} user={user} />
+          </ProtectedRoute>
+        } />
+        <Route path="/rigs/:id/confirmation" element={
+          <ProtectedRoute user={user}>
+            <Confirmation deleteRig={deleteRig} user={user} />
           </ProtectedRoute>
         } />
       </Routes>
