@@ -1,16 +1,16 @@
-.toy-details-container {
+.amp-details-container {
   display: flex;
   padding: 35px 30px;
   align-items: flex-start;
   justify-content: flex-start;
 }
 
-.toy-details-container h1 {
+.amp-details-container h1 {
   margin: 15px 0 3px;
   font-size: var(--font-xxl);
 }
 
-.toy-details-container p {
+.amp-details-container p {
   margin: 5px 0;
   font-size: var(--font-reg);
 }
