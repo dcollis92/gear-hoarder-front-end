@@ -3,23 +3,23 @@ import { useParams } from 'react-router-dom'
 import './RigDetails.css'
 
 // Services
-import { getOne, assocToy } from '../../services/rigs'
+import { getOne, assocGuitar } from '../../services/rigs'
 
 // Components
 import RigActions from './components/RigActions'
-import ToyCollection from './components/ToyCollection'
+import GuitarCollection from './components/GuitarCollection'
 
 const RigDetails = ({ catImages, user }) => {
   const { id } = useParams()
   const [rig, setRig] = useState(null)
-  const [availableToys, setAvailableToys] = useState([])
+  const [availableGuitars, setAvailableGuitars] = useState([])
   const idx = Math.floor(Math.random() * (catImages.length))
 
   const addToCollection = async (e) => {
     e.preventDefault()
-    const toyId = parseInt(e.target.id)
-    const updatedRig = await assocToy(rig.id, toyId)
-    setAvailableToys(availableToys.filter(toy => toyId !== toy.id))
+    const guitarId = parseInt(e.target.id)
+    const updatedRig = await assocGuitar(rig.id, guitarId)
+    setAvailableGuitars(availableGuitars.filter(guitar => guitarId !== guitar.id))
     setRig({...updatedRig})
   }
 
@@ -27,7 +27,7 @@ const RigDetails = ({ catImages, user }) => {
     const fetchOne = async () => {
       const data = await getOne(id)
       setRig(data.rig)
-      setAvailableToys(data.available_toys)
+      setAvailableGuitars(data.available_guitars)
     }
     fetchOne()
   }, [id])
@@ -50,11 +50,11 @@ const RigDetails = ({ catImages, user }) => {
           <RigActions rig={rig} user={user} />
         </div>
       </section>
-      <div className="toy-container">
-        <ToyCollection
+      <div className="guitar-container">
+        <GuitarCollection
           rig={rig}
           user={user}
-          toys={availableToys}
+          guitars={availableGuitars}
           addToCollection={addToCollection}
         />
       </div>
