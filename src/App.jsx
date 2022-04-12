@@ -10,18 +10,44 @@ import Profiles from './pages/Profiles/Profiles'
 import RigForm from './pages/Forms/RigForm'
 import RigList from './pages/RigList/RigList'
 import RigDetails from './pages/RigDetails/RigDetails'
-import Confirmation from './pages/Confirmation/Confirmation'
+import RigConfirmation from './pages/Confirmation/RigConfirmation'
+import AmpConfirmation from './pages/Confirmation/AmpConfirmation'
+import GuitarConfirmation from './pages/Confirmation/GuitarConfirmation'
+import PedalConfirmation from './pages/Confirmation/PedalConfirmation'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 // Services
 import * as authService from './services/authService'
 import * as rigService from './services/rigs'
 
+// Image Assets
+import AmpCombo from './assets/amp-combo.png'
+import AmpCombo2 from './assets/amp-combo-2.png'
+import AmpJcm from './assets/amp-jcmhead.png'
+import JazzBass from './assets/bass-jbass-ur.png'
+import JazzBass2 from './assets/bass-jbass.png'
+import PacoBass from './assets/bass-paco.png'
+import PrecisionBass from './assets/bass-pbass.png'
+import GuitarExplorer from './assets/guitar-explorer.png'
+import GuitarLesPaul from './assets/guitar-lespaul.png'
+import GuitarSemiHollow from './assets/guitar-semihollow.png'
+import GuitarSG from './assets/guitar-sg.png'
+import GuitarStrat from './assets/guitar-strat.jpeg'
+import CoolPedal from './assets/pedal-1.png'
+import MXRPedal from './assets/pedal-2.png'
+import BossPedal from './assets/pedal-3.png'
+import BigMuffPedal from './assets/pedal-4.png'
+
+
 const App = () => {
   const navigate = useNavigate()
   const [rigs, setRigs] = useState([])
   const [user, setUser] = useState(authService.getUser())
   console.log(user)
+
+  const gearImages = [
+    AmpCombo, AmpCombo2, AmpJcm, JazzBass, JazzBass2, PacoBass, PrecisionBass, GuitarExplorer, GuitarLesPaul, GuitarSG, GuitarSemiHollow, GuitarStrat, CoolPedal, MXRPedal, BossPedal, BigMuffPedal,
+  ]
 
   useEffect(() => {
     const fetchData = async () => {
@@ -79,14 +105,14 @@ const App = () => {
             <ProtectedRoute user={user}>
               <RigList 
                 rigs={rigs} 
-                // rigImages={catImages} 
+                gearImages={gearImages} 
               />
             </ProtectedRoute>
           } />
         <Route path="/rigs/:id" element={
           <ProtectedRoute user={user}>
             <RigDetails 
-              // catImages={catImages} 
+              gearImages={gearImages} 
               user={user} />
           </ProtectedRoute>
         } />
@@ -104,7 +130,7 @@ const App = () => {
         } />
         <Route path="/rigs/:id/confirmation" element={
           <ProtectedRoute user={user}>
-            <Confirmation deleteRig={deleteRig} user={user} />
+            <RigConfirmation deleteRig={deleteRig} user={user} />
           </ProtectedRoute>
         } />
       </Routes>
