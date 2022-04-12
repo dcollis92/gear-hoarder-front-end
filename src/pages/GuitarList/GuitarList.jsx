@@ -2,8 +2,8 @@ import './GuitarList.css'
 
 // Image Assets
 import Explorer from '../../assets/guitar-explorer.png'
-import LesPaul from '../../assets/guitar-lespaul.svg'
-import Strat from '../../assets/guitar-strat.svg'
+import LesPaul from '../../assets/guitar-lespaul.png'
+import Strat from '../../assets/guitar-strat.png'
 
 // Components
 import GuitarCard from '../../components/GuitarCard/GuitarCard'
