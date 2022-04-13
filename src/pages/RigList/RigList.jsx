@@ -22,7 +22,7 @@ const RigList = ({rigs, gearImages}) => {
           <RigCard 
           key={rig.id} 
           rig={rig} 
-          isCard={true}
+          // isCard={true}
           gearImages={gearImages} 
           />
         ))}

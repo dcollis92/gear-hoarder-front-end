@@ -1,5 +1,5 @@
 // stylesheet
-
+import '../../styles/Form.css'
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 
@@ -28,25 +28,25 @@ const AmpForm = (props) => {
 
   useEffect(() => {
     const fetchOne = async () => {
-      const data = await getOne(id)
+      const ampData = await getOne(id)
       setForm({
-        id: data.amp.id,
-        type: data.amp.type,
-        make: data.amp.make,
-        model: data.amp.model,
-        wattage: data.amp.wattage,
-        speakerSize: data.amp.speaker_size,
-        speakerAmount: data.amp.speaker_amount,
-        powerType: data.amp.power_type,
-        ohmRating: data.amp.ohm_rating,
-        color: data.amp.color,
-        year: data.amp.year,
-        description: data.amp.description,
-        isWorking: data.amp.is_working,
-        onLoan: data.amp.on_loan
+        id: ampData.id,
+        type: ampData.type,
+        make: ampData.make,
+        model: ampData.model,
+        wattage: ampData.wattage,
+        speakerSize: ampData.speaker_size,
+        speakerAmount: ampData.speaker_amount,
+        powerType: ampData.power_type,
+        ohmRating: ampData.ohm_rating,
+        color: ampData.color,
+        year: ampData.year,
+        description: ampData.description,
+        isWorking: ampData.is_working,
+        onLoan: ampData.on_loan
       })
     }
-    id && fetchOne()
+    id ? fetchOne() : setForm({ color: '#ff0000' })
     return () => setForm({})
   }, [id])
 
