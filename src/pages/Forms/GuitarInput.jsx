@@ -2,17 +2,6 @@ import { useState } from 'react';
 
 
 const GuitarInput = ({ form, handleChange }) => {
-  const [isChecked, setIsChecked] = useState(false);
-  const [isChecked2, setIsChecked2] = useState(false);
-
-  const handleCheckbox = () => {
-    setIsChecked(!isChecked);
-  };
-
-  const handleCheckbox2 = () => {
-    setIsChecked2(!isChecked2);
-  };
-
   return (
     <>
       <label htmlFor="type">Type</label>
@@ -45,13 +34,13 @@ const GuitarInput = ({ form, handleChange }) => {
         value={form.description ? form.description : ''} onChange={handleChange} id="description"
         required name="description" type="text" placeholder="Description" autoComplete="off"
       />
-      <label htmlFor="is-working">Broken?</label>
+      <label htmlFor="isWorking">Broken?</label>
       <input
-        value={form.isWorking ? form.isWorking : ''} onChange={(handleChange, handleCheckbox)} id="is-working" type="checkbox" autoComplete="off" checked={isChecked} defaultChecked={false}
+        checked={form.isWorking === 'true' ? true : false} onChange={handleChange} id="isWorking" type="checkbox" autoComplete="off" name="isWorking"
       />
-      <label htmlFor="on-loan">On Loan</label>
+      <label htmlFor="onLoan">On Loan</label>
       <input
-        value={form.onLoan ? form.onLoan : ''} onChange={(handleChange, handleCheckbox2)} id="on-loan" type="checkbox" autoComplete="off" checked={isChecked} defaultChecked={false} 
+        checked={form.onLoan === 'true' ? true : false} onChange={handleChange} id="onLoan" type="checkbox" autoComplete="off" name="onLoan"
       />
     </>
   )
