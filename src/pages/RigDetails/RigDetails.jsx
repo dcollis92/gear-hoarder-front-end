@@ -69,29 +69,31 @@ const RigDetails = ({ gearImages, user }) => {
         </div>
       </section> 
       {/* - display rig -  */}
-      <div className="guitar-container">
-        <GuitarCollection
-          rig={rig}
-          user={user}
-          guitars={availableGuitars}
-          addGuitarToCollection={addGuitarToCollection}
-        /> 
-      </div>
-      <div className="amp-container">
-        <AmpCollection
-          rig={rig}
-          user={user}
-          amps={availableAmps}
-          addAmpToCollection={addAmpToCollection}
-        /> 
-      </div>
-      <div className="pedal-container">
-        <PedalCollection
-          rig={rig}
-          user={user}
-          pedals={availablePedals}
-          addPedalToCollection={addPedalToCollection}
-        /> 
+      <div className="gear-container">
+        <div className="">
+          <GuitarCollection
+            rig={rig}
+            user={user}
+            guitars={availableGuitars}
+            addGuitarToCollection={addGuitarToCollection}
+          /> 
+        </div>
+        <div className="">
+          <AmpCollection
+            rig={rig}
+            user={user}
+            amps={availableAmps}
+            addAmpToCollection={addAmpToCollection}
+          /> 
+        </div>
+        <div className="">
+          <PedalCollection
+            rig={rig}
+            user={user}
+            pedals={availablePedals}
+            addPedalToCollection={addPedalToCollection}
+          /> 
+        </div>
       </div>
     </>
   )

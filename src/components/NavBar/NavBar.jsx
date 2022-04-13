@@ -1,33 +1,31 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const NavBar = ({ user, handleLogout }) => {
   return (
-    <>
+    <nav>
+      <ul>
       {user ?
-        <nav>
-          <ul>
-            <li>Welcome, {user.name}</li>
-            <li><Link to='/rigs'>All Rigs</Link></li>
-            <li><Link to='/guitars'>All Guitars</Link></li>
-            <li><Link to='/pedals'>All Pedals</Link></li>
-            <li><Link to='/amps'>All Amps</Link></li>
-            <li><Link to='/rigs/new'>Add a Rig</Link></li>
-            <li><Link to='/guitars/new'>Add a Guitar</Link></li>
-            <li><Link to='/pedals/new'>Add a Pedal</Link></li>
-            <li><Link to='/amps/new'>Add an Amp</Link></li>
-            <li><Link to="/profiles">Profiles</Link></li>
-            <li><Link to="" onClick={handleLogout}>LOG OUT</Link></li>
-          </ul>
-        </nav>
+        <>
+          <li>Welcome, {user.name}</li>
+          <li><NavLink to='/rigs'>All Rigs</NavLink></li>
+          <li><NavLink to='/guitars'>All Guitars</NavLink></li>
+          <li><NavLink to='/pedals'>All Pedals</NavLink></li>
+          <li><NavLink to='/amps'>All Amps</NavLink></li>
+          <li><NavLink to='/rigs/new'>Add a Rig</NavLink></li>
+          <li><NavLink to='/guitars/new'>Add a Guitar</NavLink></li>
+          <li><NavLink to='/pedals/new'>Add a Pedal</NavLink></li>
+          <li><NavLink to='/amps/new'>Add an Amp</NavLink></li>
+          <li><NavLink to="/profiles">Profiles</NavLink></li>
+          <li><NavLink to="" onClick={handleLogout}>LOG OUT</NavLink></li>
+        </>
       :
-        <nav>
-          <ul>
-            <li><Link to="/login">Log In</Link></li>
-            <li><Link to="/signup">Sign Up</Link></li>
-          </ul>
-        </nav>
+        <>
+          <li><NavLink to="/login">Log In</NavLink></li>
+          <li><NavLink to="/signup">Sign Up</NavLink></li>
+        </>
       }
-    </>
+      </ul>
+    </nav>
   )
 }
 
