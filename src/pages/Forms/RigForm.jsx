@@ -1,3 +1,4 @@
+import '../../styles/Form.css'
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 
