@@ -204,7 +204,8 @@ const App = () => {
           } /> 
         <Route path="/pedals" element={
             <ProtectedRoute user={user}>
-              <PedalList pedals={amps} 
+              <PedalList 
+                pedals={pedals} 
                 gearImages={gearImages} />
             </ProtectedRoute>
           } />

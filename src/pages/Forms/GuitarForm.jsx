@@ -13,7 +13,7 @@ import GuitarInput from './GuitarInput'
 
 const GuitarForm = (props) => {
   const { id } = useParams()
-  const { navigate } = useNavigate()
+  const navigate = useNavigate()
   const [form, setForm] = useState({})
 
   const handleSubmit = async (e) => {
