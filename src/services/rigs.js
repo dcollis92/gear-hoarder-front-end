@@ -78,3 +78,18 @@ export const assocGuitar = async (rigId, guitarId) => {
     throw error
   }
 }
+
+export const assocPedal = async (rigId, pedalId) => {
+  try {
+    const res = await fetch(`${BASE_URL}${rigId}/pedals/${pedalId}`, {
+      method: "LINK",
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      },
+    })
+    return await res.json()
+  } catch (error) {
+    console.log(error)
+    throw error
+  }
+}
