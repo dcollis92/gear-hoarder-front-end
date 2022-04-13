@@ -13,7 +13,7 @@ import AmpInput from './AmpInput'
 
 const AmpForm = (props) => {
   const { id } = useParams()
-  const { navigate } = useNavigate()
+  const navigate = useNavigate()
   const [form, setForm] = useState({})
 
   const handleSubmit = async (e) => {
