@@ -8,7 +8,7 @@ const AmpInput = ({ form, handleChange }) => {
         <option value="Cabinet">Cabinet</option>
         <option value="Power Amp">Power Amp</option>
         <option value="Pre-Amp">Pre-Amp</option>
-      </select>  
+      </select>   
       <label htmlFor="make">Make</label>
       <input
         value={form.make ? form.make : ''} onChange={handleChange} id="make"
