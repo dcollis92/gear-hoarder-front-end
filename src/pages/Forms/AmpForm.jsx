@@ -19,7 +19,7 @@ const AmpForm = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     id ? props.updateAmp(form) : props.addAmp(form)
-    navigate('/amps')
+    navigate(`/amps`)
   }
 
   const handleChange = (e) => {
@@ -28,25 +28,25 @@ const AmpForm = (props) => {
 
   useEffect(() => {
     const fetchOne = async () => {
-      const ampData = await getOne(id)
+      const data = await getOne(id)
       setForm({
-        id: ampData.id,
-        type: ampData.type,
-        make: ampData.make,
-        model: ampData.model,
-        wattage: ampData.wattage,
-        speaker_size: ampData.speaker_size,
-        speaker_amount: ampData.speaker_amount,
-        power_type: ampData.power_type,
-        ohm_rating: ampData.ohm_rating,
-        color: ampData.color,
-        year: ampData.year,
-        description: ampData.description,
-        is_working: ampData.is_working,
-        on_loan: ampData.on_loan,
+        id: data.amp.id,
+        type: data.amp.type,
+        make: data.amp.make,
+        model: data.amp.model,
+        wattage: data.amp.wattage,
+        speakerSize: data.amp.speaker_size,
+        speakerAmount: data.amp.speaker_amount,
+        powerType: data.amp.power_type,
+        ohmRating: data.amp.ohm_rating,
+        color: data.amp.color,
+        year: data.amp.year,
+        description: data.amp.description,
+        isWorking: data.amp.is_working,
+        onLoan: data.amp.on_loan
       })
     }
-    id ? fetchOne() : setForm({ color: '#ff0000' })
+    id && fetchOne()
     return () => setForm({})
   }, [id])
 

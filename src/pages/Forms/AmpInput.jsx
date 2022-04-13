@@ -16,32 +16,32 @@ const AmpInput = ({ form, handleChange }) => {
         value={form.wattage ? form.wattage : ''} onChange={handleChange} id="wattage"
         required name="wattage" type="text" placeholder="Wattage" autoComplete="off"
       />
-      {/* <label htmlFor="speaker-size">Speaker Size</label>
+      <label htmlFor="speakerSize">Speaker Size</label>
       <input
-        value={form.speaker_size ? form.speaker_size : ''} onChange={handleChange} id="speaker-size"
-        required name="speaker-size" type="text" placeholder="SpeakerSize" autoComplete="off"
-      /> */}
-      {/* <label htmlFor="speaker-amount">Speaker Amount</label>
+        value={form.speakerSize ? form.speakerSize : ''} onChange={handleChange} id="speakerSize"
+        required name="speakerSize" type="text" placeholder="Speaker Size" autoComplete="off"
+      />
+      <label htmlFor="speakerAmount">Speaker Amount</label>
       <input
-        value={form.speaker_amount ? form.speaker_amount : ''} onChange={handleChange} id="speaker-amount"
-        required name="speaker-amount" type="text" placeholder="SpeakerAmount" autoComplete="off"
-      /> */}
-      {/* <label htmlFor="power-type">Power Type</label>
+        value={form.speakerAmount ? form.speakerAmount : ''} onChange={handleChange} id="speakerAmount"
+        required name="speakerAmount" type="text" placeholder="Speaker Amount" autoComplete="off"
+      />
+      {/* <label htmlFor="powerType">Power Type</label>
       <input
-        value={form.power_type ? form.power_type : ''} onChange={handleChange} id="power-type"
+        value={form.powerType ? form.powerType : ''} onChange={handleChange} id="power-type"
         required name="power-type" type="text" placeholder="PowerType" autoComplete="off"
       /> */}
-      {/* <label htmlFor="power-type">Power Type</label>
-      <select value={form.power_type ? form.power_type : ''} onChange={handleChange} id="power-type" required>
+      <label htmlFor="powerType">Power Type</label>
+      <select value={form.powerType} onChange={handleChange} id="powerType" required>
         <optiion selected value="Tube">Tube</optiion>
         <optiion value="Solid State">Solid State</optiion>
         <optiion value="Hybrid">Hybrid</optiion>
-      </select>      */}
-      {/* <label htmlFor="ohm-rating">Ohm Rating</label>
+      </select>     
+      <label htmlFor="ohmRating">Ohm Rating</label>
       <input
-        value={form.ohm_rating ? form.ohm_rating : ''} onChange={handleChange} id="ohm-rating"
-        required name="ohm-rating" type="text" placeholder="OhmRating" autoComplete="off"
-      />            */}
+        value={form.ohmRating ? form.ohmRating : ''} onChange={handleChange} id="ohmRating"
+        required name="ohmRating" type="text" placeholder="OhmRating" autoComplete="off"
+      />           
       <label htmlFor="color">Color</label>
       <input
         value={form.color ? form.color : '#ff0000'} onChange={handleChange} id="color"
@@ -50,22 +50,22 @@ const AmpInput = ({ form, handleChange }) => {
       <label htmlFor="year">Year</label>
       <input
         value={form.year ? form.year : '1969'} onChange={handleChange} id="year"
-        required name="year" type="year" placeholder="year" autoComplete="off"
+        required name="year" type="year" autoComplete="off"
       />
       <label htmlFor="description">Description</label>
       <input
         value={form.description ? form.description : ''} onChange={handleChange} id="description"
         required name="description" type="text" placeholder="Description" autoComplete="off"
       />
-      {/* <label htmlFor="is-working">Is Working</label>
+      {/* <label htmlFor="isWorking">Is Working</label>
       <input
-        value={form.is_working ? form.is_working : ''} onChange={handleChange} id="is-working"
-        required name="is-working" type="text" placeholder="IsWorking" autoComplete="off"
+        value={form.isWorking ? form.isWorking : ''} onChange={handleChange} id="isWorking"
+        required name="isWorking" type="text" placeholder="IsWorking" autoComplete="off"
       />
-      <label htmlFor="on-loan">On Loan</label>
+      <label htmlFor="onLoan">On Loan</label>
       <input
-        value={form.on_loan ? form.on_loan : ''} onChange={handleChange} id="on-loan"
-        required name="on-loan" type="text" placeholder="OnLoan" autoComplete="off"
+        value={form.onLoan ? form.onLoan : ''} onChange={handleChange} id="onLoan"
+        required name="onLoan" type="text" placeholder="OnLoan" autoComplete="off"
       /> */}
     </>
   )
