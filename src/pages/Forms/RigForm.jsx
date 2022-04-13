@@ -44,7 +44,7 @@ const RigForm = (props) => {
       <div className="page-header">
         {id
           ? <h1>Edit Rig</h1>
-          : <><h1>Add Rig</h1><img src={AmpCombo} alt="A combo amp" /></>
+          : <><h1>Add A Rig</h1><img src={AmpCombo} alt="A combo amp" /></>
         }
       </div>
 

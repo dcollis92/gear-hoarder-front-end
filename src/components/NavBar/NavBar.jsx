@@ -7,7 +7,7 @@ const NavBar = ({ user, handleLogout }) => {
         <nav>
           <ul>
             <li>Welcome, {user.name}</li>
-            <li><Link to='/rigs'>All Rigss</Link></li>
+            <li><Link to='/rigs'>All Rigs</Link></li>
             <li><Link to='/guitars'>All Guitars</Link></li>
             <li><Link to='/pedals'>All Pedals</Link></li>
             <li><Link to='/amps'>All Amps</Link></li>
