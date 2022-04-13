@@ -8,7 +8,7 @@ const AmpInput = ({ form, handleChange }) => {
         <option value="Cabinet">Cabinet</option>
         <option value="Power Amp">Power Amp</option>
         <option value="Pre-Amp">Pre-Amp</option>
-      </select>  
+      </select>   
       <label htmlFor="make">Make</label>
       <input
         value={form.make ? form.make : ''} onChange={handleChange} id="make"
@@ -55,7 +55,7 @@ const AmpInput = ({ form, handleChange }) => {
       />
       <label htmlFor="year">Year</label>
       <input
-        value={form.year ? form.year : '1969'} onChange={handleChange} id="year"
+        value={form.year ? form.year : ''} onChange={handleChange} id="year"
         required name="year" type="year" autoComplete="off"
       /> 
       <label htmlFor="description">Description</label>
