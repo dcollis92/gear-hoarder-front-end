@@ -67,7 +67,7 @@ const GuitarForm = (props) => {
           ? <h1>Edit Guitar</h1>
           : <>
             <h1>Add Guitar</h1>
-            {/* <img src={} alt="" /> */}
+            {/* <img src= {} alt="" /> */}
             </>
         }
       </div>
