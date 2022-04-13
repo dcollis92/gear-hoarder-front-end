@@ -21,7 +21,7 @@ const GuitarCollection = ({ rig, guitars, user, addGuitarToCollection }) => {
           <h3>Available guitars</h3>
           <div className="subsection-content">
             {guitars.length
-              ? guitars.map((guitar) => <GuitarContainer key={guitar.id} guitar={guitar} rig={rig} user={user} addToCollection={addGuitarToCollection} />)
+              ? guitars.map((guitar) => <GuitarContainer key={guitar.id} guitar={guitar} rig={rig} user={user} addGuitarToCollection={addGuitarToCollection} />)
               : <p className="all-guitars"> {rig.name} already has all the available guitars 🥳</p>
             }
           </div>
