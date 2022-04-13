@@ -25,9 +25,9 @@ const AmpDetails = ({ user }) => {
     amp &&
     <>
       <section className="amp-details-container">
-        <div className="amp-img">
+        {/* <div className="amp-img">
           <AmpCard amp={amp} />
-        </div>
+        </div> */}
         <div className="amp-details">
           <h1>{amp.name}</h1>
           <p>{amp.description}</p>

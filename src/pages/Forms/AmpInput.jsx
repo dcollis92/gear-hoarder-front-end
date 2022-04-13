@@ -1,6 +1,14 @@
 const AmpInput = ({ form, handleChange }) => {
   return (
     <>
+      <label htmlFor="type">Type</label>
+      <select value={form.type} onChange={handleChange} id="type" required name="type">
+        <option selected value="Combo">Combo</option>
+        <option value="Head">Head</option>
+        <option value="Cabinet">Cabinet</option>
+        <option value="Power Amp">Power Amp</option>
+        <option value="Pre-Amp">Pre-Amp</option>
+      </select>  
       <label htmlFor="make">Make</label>
       <input
         value={form.make ? form.make : ''} onChange={handleChange} id="make"
@@ -26,22 +34,20 @@ const AmpInput = ({ form, handleChange }) => {
         value={form.speakerAmount ? form.speakerAmount : ''} onChange={handleChange} id="speakerAmount"
         required name="speakerAmount" type="text" placeholder="Speaker Amount" autoComplete="off"
       />
-      {/* <label htmlFor="powerType">Power Type</label>
-      <input
-        value={form.powerType ? form.powerType : ''} onChange={handleChange} id="power-type"
-        required name="power-type" type="text" placeholder="PowerType" autoComplete="off"
-      /> */}
-      {/* <label htmlFor="powerType">Power Type</label>
+      <label htmlFor="powerType">Power Type</label>
       <select value={form.powerType} onChange={handleChange} id="powerType" required name="powerType">
         <option selected value="Tube">Tube</option>
         <option value="Solid State">Solid State</option>
         <option value="Hybrid">Hybrid</option>
       </select>     
       <label htmlFor="ohmRating">Ohm Rating</label>
-      <input
-        value={form.ohmRating ? form.ohmRating : ''} onChange={handleChange} id="ohmRating"
-        required name="ohmRating" type="text" placeholder="OhmRating" autoComplete="off"
-      />            */}
+      <select
+        value={form.ohmRating} onChange={handleChange} id="ohmRating" required name="ohmRating">
+        <option value="4">4</option> 
+        <option selected value="8">8</option> 
+        <option value="16">16</option> 
+        <option value="Multi">Multi</option> 
+      </select>           
       <label htmlFor="color">Color</label>
       <input
         value={form.color ? form.color : '#ff0000'} onChange={handleChange} id="color"
@@ -51,7 +57,7 @@ const AmpInput = ({ form, handleChange }) => {
       <input
         value={form.year ? form.year : '1969'} onChange={handleChange} id="year"
         required name="year" type="year" autoComplete="off"
-      /> */}
+      /> 
       <label htmlFor="description">Description</label>
       <input
         value={form.description ? form.description : ''} onChange={handleChange} id="description"
