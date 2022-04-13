@@ -179,103 +179,80 @@ const App = () => {
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
         <Route path="/" element={<Landing user={user} />} />
-        <Route
-          path="/signup"
-          element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
+        <Route path="/signup" element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
         />
-        <Route
-          path="/login"
-          element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
+        <Route path="/login" element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
         />
-        <Route
-          path="/profiles"
-          element={user ? <Profiles /> : <Navigate to="/login" />}
+        <Route path="/profiles" element={user ? <Profiles /> : <Navigate to="/login" />}
         />
         <Route path="/rigs" element={
             <ProtectedRoute user={user}>
-              <RigList 
-                rigs={rigs} 
-                gearImages={gearImages} 
-              />
+              <RigList rigs={rigs} 
+              gearImages={gearImages} />
             </ProtectedRoute>
           } />
         <Route path="/amps" element={
             <ProtectedRoute user={user}>
-              <AmpList 
-                amps={amps} 
-                gearImages={gearImages} 
-              />
+              <AmpList amps={amps} 
+              gearImages={gearImages} />
             </ProtectedRoute>
           } />
         <Route path="/guitars" element={
             <ProtectedRoute user={user}>
-              <GuitarList 
-                guitars={guitars} 
-                gearImages={gearImages} 
-              />
+              <GuitarList guitars={guitars} gearImages={gearImages} />
             </ProtectedRoute>
           } /> 
         <Route path="/pedals" element={
             <ProtectedRoute user={user}>
-              <PedalList 
-                pedals={amps} 
-                gearImages={gearImages} 
-              />
+              <PedalList pedals={amps} 
+                gearImages={gearImages} />
             </ProtectedRoute>
           } />
         <Route path="/rigs/:id" element={
           <ProtectedRoute user={user}>
-            <RigDetails 
-              gearImages={gearImages} 
+            <RigDetails gearImages={gearImages} 
               user={user} />
           </ProtectedRoute>
         } />
         <Route path="/amps/:id" element={
           <ProtectedRoute user={user}>
-            <AmpDetails 
-              gearImages={gearImages} 
+            <AmpDetails gearImages={gearImages} 
               user={user} />
           </ProtectedRoute>
         } />
         <Route path="/guitars/:id" element={
           <ProtectedRoute user={user}>
-            <GuitarDetails 
-              gearImages={gearImages} 
+            <GuitarDetails gearImages={gearImages} 
               user={user} />
           </ProtectedRoute>
         } />
         <Route path="/pedals/:id" element={
           <ProtectedRoute user={user}>
-            <PedalDetails 
-              gearImages={gearImages} 
+            <PedalDetails gearImages={gearImages} 
               user={user} />
           </ProtectedRoute>
         } />
         <Route path="/rigs/new" element={
           <ProtectedRoute user={user}>
-            <RigForm 
-            addRig={addRig} 
+            <RigForm addRig={addRig} 
             user={user} />
           </ProtectedRoute>
         } />
         <Route path="/amps/new" element={
           <ProtectedRoute user={user}>
-            <AmpForm 
-            addAmp={addAmp} 
+            <AmpForm addAmp={addAmp} 
             user={user} />
           </ProtectedRoute>
         } />
         <Route path="/guitars/new" element={
           <ProtectedRoute user={user}>
-            <GuitarForm 
-            addGuitar={addGuitar} 
+            <GuitarForm addGuitar={addGuitar} 
             user={user} />
           </ProtectedRoute>
         } />
         <Route path="/pedals/new" element={
           <ProtectedRoute user={user}>
-            <PedalForm 
-            addPedal={addPedal} 
+            <PedalForm addPedal={addPedal} 
             user={user} />
           </ProtectedRoute>
         } />

@@ -11,15 +11,13 @@ import RigCard from '../../components/RigCard/RigCard'
 const RigList = ({rigs, gearImages}) => {
   return (
     <>
-      <section
-      className="page-header">
+      <section className="page-header">
         <h1>Rigs</h1>
         {/* <img src={} alt=""
         <img src={} alt=""
         <img src={} alt="" */}
       </section>
-      <section
-      className="rig-card-container">
+      <section className="card-container">
         {rigs.map((rig) => (
           <RigCard 
           key={rig.id} 
