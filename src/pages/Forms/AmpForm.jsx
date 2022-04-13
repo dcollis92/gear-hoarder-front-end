@@ -18,7 +18,24 @@ const AmpForm = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    id ? props.updateAmp(form) : props.addAmp(form)
+    const formData = {
+      id: form.id,
+      type: form.type,
+      make: form.make,
+      model: form.model,
+      wattage: form.wattage,
+      speaker_size: form.speakerSize,
+      speaker_amount: form.speakerAmount,
+      power_type: form.powerType,
+      ohm_rating: form.ohmRating,
+      color: form.color,
+      year: form.year,
+      description: form.description,
+      is_working: form.isWorking,
+      on_loan: form.onLoan
+
+    }
+    id ? props.updateAmp(formData) : props.addAmp(formData)
     navigate(`/amps`)
   }
 
