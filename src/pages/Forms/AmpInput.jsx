@@ -31,17 +31,17 @@ const AmpInput = ({ form, handleChange }) => {
         value={form.powerType ? form.powerType : ''} onChange={handleChange} id="power-type"
         required name="power-type" type="text" placeholder="PowerType" autoComplete="off"
       /> */}
-      <label htmlFor="powerType">Power Type</label>
+      {/* <label htmlFor="powerType">Power Type</label>
       <select value={form.powerType} onChange={handleChange} id="powerType" required>
         <optiion selected value="Tube">Tube</optiion>
         <optiion value="Solid State">Solid State</optiion>
         <optiion value="Hybrid">Hybrid</optiion>
-      </select>     
-      <label htmlFor="ohmRating">Ohm Rating</label>
+      </select>      */}
+      {/* <label htmlFor="ohmRating">Ohm Rating</label>
       <input
         value={form.ohmRating ? form.ohmRating : ''} onChange={handleChange} id="ohmRating"
         required name="ohmRating" type="text" placeholder="OhmRating" autoComplete="off"
-      />           
+      />            */}
       <label htmlFor="color">Color</label>
       <input
         value={form.color ? form.color : '#ff0000'} onChange={handleChange} id="color"

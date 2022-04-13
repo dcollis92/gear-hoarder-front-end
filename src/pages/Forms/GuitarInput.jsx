@@ -1,4 +1,18 @@
+import { useState } from 'react';
+
+
 const GuitarInput = ({ form, handleChange }) => {
+  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked2, setIsChecked2] = useState(false);
+
+  const handleCheckbox = () => {
+    setIsChecked(!isChecked);
+  };
+
+  const handleCheckbox2 = () => {
+    setIsChecked2(!isChecked2);
+  };
+
   return (
     <>
       <label htmlFor="type">Type</label>
@@ -23,7 +37,7 @@ const GuitarInput = ({ form, handleChange }) => {
       />
       <label htmlFor="year">Year</label>
       <input
-        value={form.year ? form.year : '1969'} onChange={handleChange} id="year"
+        value={form.year ? form.year : ''} onChange={handleChange} id="year"
         required name="year" type="year" placeholder="year" autoComplete="off"
       />
       <label htmlFor="description">Description</label>
@@ -31,16 +45,14 @@ const GuitarInput = ({ form, handleChange }) => {
         value={form.description ? form.description : ''} onChange={handleChange} id="description"
         required name="description" type="text" placeholder="Description" autoComplete="off"
       />
-      {/* <label htmlFor="is-working">Is Working</label>
+      <label htmlFor="is-working">Broken?</label>
       <input
-        value={form.is_working ? form.is_working : ''} onChange={handleChange} id="is-working"
-        required name="is-working" type="text" placeholder="IsWorking" autoComplete="off"
+        value={form.isWorking ? form.isWorking : ''} onChange={(handleChange, handleCheckbox)} id="is-working" type="checkbox" autoComplete="off" checked={isChecked} defaultChecked={false}
       />
       <label htmlFor="on-loan">On Loan</label>
       <input
-        value={form.on_loan ? form.on_loan : ''} onChange={handleChange} id="on-loan"
-        required name="on-loan" type="text" placeholder="OnLoan" autoComplete="off"
-      /> */}
+        value={form.onLoan ? form.onLoan : ''} onChange={(handleChange, handleCheckbox2)} id="on-loan" type="checkbox" autoComplete="off" checked={isChecked} defaultChecked={false} 
+      />
     </>
   )
 }
