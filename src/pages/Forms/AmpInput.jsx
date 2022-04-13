@@ -41,7 +41,7 @@ const AmpInput = ({ form, handleChange }) => {
       <input
         value={form.ohmRating ? form.ohmRating : ''} onChange={handleChange} id="ohmRating"
         required name="ohmRating" type="text" placeholder="OhmRating" autoComplete="off"
-      />           
+      />            */}
       <label htmlFor="color">Color</label>
       <input
         value={form.color ? form.color : '#ff0000'} onChange={handleChange} id="color"
