@@ -21,7 +21,7 @@ const PedalCollection = ({ rig, pedals, user, addPedalToCollection }) => {
           <h3>Available pedals</h3>
           <div className="subsection-content">
             {pedals.length
-              ? pedals.map((pedal) => <PedalContainer key={pedal.id} pedal={pedal} rig={rig} user={user} addToCollection={addPedalToCollection} />)
+              ? pedals.map((pedal) => <PedalContainer key={pedal.id} pedal={pedal} rig={rig} user={user} addPedalToCollection={addPedalToCollection} />)
               : <p className="all-pedals"> {rig.name} already has all the available pedals 🥳</p>
             }
           </div>
