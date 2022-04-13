@@ -64,6 +64,21 @@ export const deleteOne = async (id) => {
   }
 }
 
+export const assocAmp = async (rigId, ampId) => {
+  try {
+    const res = await fetch(`${BASE_URL}${rigId}/amps/${ampId}`, {
+      method: "LINK",
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      },
+    })
+    return await res.json()
+  } catch (error) {
+    console.log(error)
+    throw error
+  }
+}
+
 export const assocGuitar = async (rigId, guitarId) => {
   try {
     const res = await fetch(`${BASE_URL}${rigId}/guitars/${guitarId}`, {
@@ -82,21 +97,6 @@ export const assocGuitar = async (rigId, guitarId) => {
 export const assocPedal = async (rigId, pedalId) => {
   try {
     const res = await fetch(`${BASE_URL}${rigId}/pedals/${pedalId}`, {
-      method: "LINK",
-      headers: {
-        'Authorization': `Bearer ${tokenService.getToken()}`
-      },
-    })
-    return await res.json()
-  } catch (error) {
-    console.log(error)
-    throw error
-  }
-}
-
-export const assocAmp = async (rigId, ampId) => {
-  try {
-    const res = await fetch(`${BASE_URL}${rigId}/amps/${ampId}`, {
       method: "LINK",
       headers: {
         'Authorization': `Bearer ${tokenService.getToken()}`
