@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom'
 const PedalContainer = ({ pedal, addPedalToCollection }) => {
   return (
     <div key={pedal.id} className="pedal-container">
-      <div className="color-block" 
-          style={{ backgroundColor: pedal.color }}>
-          </div>
+      <div className="color-block" style={{ backgroundColor: pedal.color }}></div>
       <Link to={`/pedals/${pedal.id}`}>
         <p>{pedal.name}</p>
       </Link>
