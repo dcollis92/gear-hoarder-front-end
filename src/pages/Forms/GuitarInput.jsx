@@ -31,7 +31,7 @@ const GuitarInput = ({ form, handleChange }) => {
         value={form.description ? form.description : ''} onChange={handleChange} id="description"
         required name="description" type="text" placeholder="Description" autoComplete="off"
       />
-      <label htmlFor="is-working">Is Working</label>
+      {/* <label htmlFor="is-working">Is Working</label>
       <input
         value={form.is_working ? form.is_working : ''} onChange={handleChange} id="is-working"
         required name="is-working" type="text" placeholder="IsWorking" autoComplete="off"
@@ -40,7 +40,7 @@ const GuitarInput = ({ form, handleChange }) => {
       <input
         value={form.on_loan ? form.on_loan : ''} onChange={handleChange} id="on-loan"
         required name="on-loan" type="text" placeholder="OnLoan" autoComplete="off"
-      />
+      /> */}
     </>
   )
 }

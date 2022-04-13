@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import './PedalDetails.css'
 
 // Services
-import { getOne } from '../../services/pedal'
+import { getOne } from '../../services/pedals'
 
 // Components
 import PedalActions from './components/PedalActions'
