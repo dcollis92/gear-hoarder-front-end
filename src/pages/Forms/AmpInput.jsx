@@ -55,7 +55,7 @@ const AmpInput = ({ form, handleChange }) => {
       />
       <label htmlFor="year">Year</label>
       <input
-        value={form.year ? form.year : '1969'} onChange={handleChange} id="year"
+        value={form.year ? form.year : ''} onChange={handleChange} id="year"
         required name="year" type="year" autoComplete="off"
       /> 
       <label htmlFor="description">Description</label>
