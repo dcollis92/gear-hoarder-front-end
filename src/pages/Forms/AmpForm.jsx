@@ -14,7 +14,7 @@ import AmpInput from './AmpInput'
 const AmpForm = (props) => {
   const { id } = useParams()
   const navigate = useNavigate()
-  const [form, setForm] = useState({})
+  const [form, setForm] = useState({ color: '#ff0000', isWorking: "false", onLoan: "false" })
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -31,8 +31,8 @@ const AmpForm = (props) => {
       color: form.color,
       year: form.year,
       description: form.description,
-      is_working: form.isWorking,
-      on_loan: form.onLoan
+      is_working: form.isWorking === "true" ? false : true,
+      on_loan: form.onLoan === "true" ? true : false,
 
     }
     id ? props.updateAmp(formData) : props.addAmp(formData)
@@ -40,6 +40,10 @@ const AmpForm = (props) => {
   }
 
   const handleChange = (e) => {
+    if (e.target.name === "onLoan" || e.target.name === "isWorking") {
+      e.target.value = form[e.target.name] === "true" ? "false" : "true"
+    }
+    console.log(e.target.value);
     setForm({...form, [e.target.name]: e.target.value })
   }
 
@@ -63,7 +67,7 @@ const AmpForm = (props) => {
         onLoan: ampData.on_loan
       })
     }
-    id ? fetchOne() : setForm({ color: '#ff0000' })
+    id ? fetchOne() : setForm({ color: '#ff0000', isWorking: false, onLoan: false })
     return () => setForm({})
   }, [id])
 
