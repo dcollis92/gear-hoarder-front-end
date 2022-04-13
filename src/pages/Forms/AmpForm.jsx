@@ -57,7 +57,7 @@ const AmpForm = (props) => {
           ? <h1>Edit Amp</h1>
           : <>
             <h1>Add Amp</h1>
-            {/* <img src={} alt="" /> */}
+            {/* <img src={} alt="" /> */} 
             </>
         }
       </div>
