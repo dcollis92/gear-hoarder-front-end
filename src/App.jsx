@@ -104,9 +104,9 @@ const App = () => {
     Rig1, Rig2, Rig3, Rig4, Rig5, Rig6, Rig7, Rig8, Rig9, Rig10, Rig11, Rig12
   ]
 
-  const ampImages = [
+  // const ampImages = [
 
-  ]
+  // ]
 
   const guitarImages = [
     Guitar1, Guitar2, Guitar3, Guitar4, Guitar5, Guitar6, Guitar7, Guitar8, Guitar9, Guitar10, Guitar11, Guitar12

@@ -1,6 +1,3 @@
-import { useState } from 'react';
-
-
 const GuitarInput = ({ form, handleChange }) => {
   return (
     <>
