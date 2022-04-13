@@ -31,16 +31,14 @@ const PedalInput = ({ form, handleChange }) => {
         value={form.description ? form.description : ''} onChange={handleChange} id="description"
         required name="description" type="text" placeholder="Description" autoComplete="off"
       />
-      {/* <label htmlFor="is-working">Is Working</label>
+      <label htmlFor="isWorking">Broken?</label>
       <input
-        value={form.is_working ? form.is_working : ''} onChange={handleChange} id="is-working"
-        required name="is-working" type="text" placeholder="IsWorking" autoComplete="off"
+        checked={form.isWorking === 'true' ? true : false} onChange={handleChange} id="isWorking" type="checkbox" autoComplete="off" name="isWorking"
       />
-      <label htmlFor="on-loan">On Loan</label>
+      <label htmlFor="onLoan">On Loan</label>
       <input
-        value={form.on_loan ? form.on_loan : ''} onChange={handleChange} id="on-loan"
-        required name="on-loan" type="text" placeholder="OnLoan" autoComplete="off"
-      /> */}
+        checked={form.onLoan === 'true' ? true : false} onChange={handleChange} id="onLoan" type="checkbox" autoComplete="off" name="onLoan"
+      />
     </>
   )
 }

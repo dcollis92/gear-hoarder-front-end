@@ -63,16 +63,14 @@ const AmpInput = ({ form, handleChange }) => {
         value={form.description ? form.description : ''} onChange={handleChange} id="description"
         required name="description" type="text" placeholder="Description" autoComplete="off"
       />
-      {/* <label htmlFor="isWorking">Is Working</label>
+      <label htmlFor="isWorking">Broken?</label>
       <input
-        value={form.isWorking ? form.isWorking : ''} onChange={handleChange} id="isWorking"
-        required name="isWorking" type="text" placeholder="IsWorking" autoComplete="off"
+        checked={form.isWorking === 'true' ? true : false} onChange={handleChange} id="isWorking" type="checkbox" autoComplete="off" name="isWorking"
       />
       <label htmlFor="onLoan">On Loan</label>
       <input
-        value={form.onLoan ? form.onLoan : ''} onChange={handleChange} id="onLoan"
-        required name="onLoan" type="text" placeholder="OnLoan" autoComplete="off"
-      /> */}
+        checked={form.onLoan === 'true' ? true : false} onChange={handleChange} id="onLoan" type="checkbox" autoComplete="off" name="onLoan"
+      />
     </>
   )
 }
