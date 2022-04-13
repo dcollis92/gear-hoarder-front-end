@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 
 const RigCard = ({ rig, gearImages }) => {
+
   const idx = Math.floor(Math.random() * (gearImages.length))
 
   return (
@@ -10,6 +11,7 @@ const RigCard = ({ rig, gearImages }) => {
           <img className="usr-img" src={gearImages[idx]} alt={`${rig.name}`} />
         </div>
         <h2 className="card-title">{rig.name}</h2>
+        <p></p>
         <p><small>{rig.description}</small></p>
       </div>
     </Link>
