@@ -37,8 +37,8 @@ const GuitarForm = (props) => {
         color: guitarData.color,
         year: guitarData.year,
         description: guitarData.description,
-        // is_working: guitarData.is_working,
-        // on_loan: guitarData.on_loan,
+        is_working: guitarData.is_working,
+        on_loan: guitarData.on_loan,
       })
     }
     id ? fetchOne() : setForm({ color: '#ff0000' })

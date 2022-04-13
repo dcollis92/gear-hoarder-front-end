@@ -32,13 +32,11 @@ const AmpInput = ({ form, handleChange }) => {
         required name="power-type" type="text" placeholder="PowerType" autoComplete="off"
       /> */}
       {/* <label htmlFor="power-type">Power Type</label>
-      <select>
+      <select value={form.power_type ? form.power_type : ''} onChange={handleChange} id="power-type" required>
         <optiion selected value="Tube">Tube</optiion>
         <optiion value="Solid State">Solid State</optiion>
         <optiion value="Hybrid">Hybrid</optiion>
-      </select>
-      <input value={form.power_type ? form.power_type : ''} onChange={handleChange} id="power-type"
-      /> */}
+      </select>      */}
       {/* <label htmlFor="ohm-rating">Ohm Rating</label>
       <input
         value={form.ohm_rating ? form.ohm_rating : ''} onChange={handleChange} id="ohm-rating"
