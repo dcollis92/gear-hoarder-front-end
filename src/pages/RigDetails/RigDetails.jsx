@@ -43,12 +43,6 @@ const RigDetails = ({ gearImages, user }) => {
         </div>
         <div className="rig-details">
           <h1>{rig.name}</h1>
-          {/* 
-
-              <h2> {rig.id} </h2>
-              
-
-          } */}
           <p>{rig.description}</p>
           <RigActions rig={rig} user={user} />
         </div>

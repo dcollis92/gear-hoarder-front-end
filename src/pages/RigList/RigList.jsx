@@ -8,7 +8,7 @@ import './RigList.css'
 // Components
 import RigCard from '../../components/RigCard/RigCard'
 
-const RigList = (props) => {
+const RigList = ({rigs, gearImages}) => {
   return (
     <>
       <section
@@ -20,8 +20,13 @@ const RigList = (props) => {
       </section>
       <section
       className="rig-card-container">
-        {props.rigs.map((rig) => (
-          <RigCard key={rig.id} rig={rig} isCard={true} />
+        {rigs.map((rig) => (
+          <RigCard 
+          key={rig.id} 
+          rig={rig} 
+          isCard={true}
+          gearImages={gearImages} 
+          />
         ))}
       </section>
     </>
