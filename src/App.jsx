@@ -33,9 +33,39 @@ import * as guitarService from './services/guitars'
 import * as pedalService from './services/pedals'
 
 // Image Assets
+// Rigs
+import Rig1 from './assets/rigs/rig1.jpeg'
+import Rig2 from './assets/rigs/rig2.jpeg'
+import Rig3 from './assets/rigs/rig3.jpeg'
+import Rig4 from './assets/rigs/rig4.jpeg'
+import Rig5 from './assets/rigs/rig5.jpeg'
+import Rig6 from './assets/rigs/rig6.jpeg'
+import Rig7 from './assets/rigs/rig7.jpeg'
+import Rig8 from './assets/rigs/rig8.jpeg'
+import Rig9 from './assets/rigs/rig9.jpeg'
+import Rig10 from './assets/rigs/rig10.jpeg'
+import Rig11 from './assets/rigs/rig11.jpeg'
+import Rig12 from './assets/rigs/rig12.jpeg'
+
+// Amps
 import AmpCombo from './assets/amp-combo.png'
 import AmpCombo2 from './assets/amp-combo-2.png'
 import AmpJcm from './assets/amp-jcmhead.png'
+
+// Guitars
+import Guitar1 from './assets/guitars/guitar1.jpeg'
+import Guitar2 from './assets/guitars/guitar2.jpeg'
+import Guitar3 from './assets/guitars/guitar3.jpeg'
+import Guitar4 from './assets/guitars/guitar4.jpeg'
+import Guitar5 from './assets/guitars/guitar5.jpeg'
+import Guitar6 from './assets/guitars/guitar6.jpeg'
+import Guitar7 from './assets/guitars/guitar7.jpeg'
+import Guitar8 from './assets/guitars/guitar8.jpeg'
+import Guitar9 from './assets/guitars/guitar9.jpeg'
+import Guitar10 from './assets/guitars/guitar10.jpeg'
+import Guitar11 from './assets/guitars/guitar11.jpeg'
+import Guitar12 from './assets/guitars/guitar12.jpeg'
+
 import JazzBass from './assets/bass-jbass-ur.png'
 import JazzBass2 from './assets/bass-jbass.png'
 import PacoBass from './assets/bass-paco.png'
@@ -45,10 +75,20 @@ import GuitarLesPaul from './assets/guitar-lespaul.png'
 import GuitarSemiHollow from './assets/guitar-semihollow.png'
 import GuitarSG from './assets/guitar-sg.png'
 import GuitarStrat from './assets/guitar-strat.png'
-import CoolPedal from './assets/pedal-1.png'
-import MXRPedal from './assets/pedal-2.png'
-import BossPedal from './assets/pedal-3.png'
-import BigMuffPedal from './assets/pedal-4.png'
+
+// Pedals
+import Pedal1 from './assets/pedals/pedal1.jpeg'
+import Pedal2 from './assets/pedals/pedal2.jpeg'
+import Pedal3 from './assets/pedals/pedal3.jpeg'
+import Pedal4 from './assets/pedals/pedal4.jpeg'
+import Pedal5 from './assets/pedals/pedal5.jpeg'
+import Pedal6 from './assets/pedals/pedal6.jpeg'
+import Pedal7 from './assets/pedals/pedal7.jpeg'
+import Pedal8 from './assets/pedals/pedal8.jpeg'
+import Pedal9 from './assets/pedals/pedal9.jpeg'
+import Pedal10 from './assets/pedals/pedal10.jpeg'
+import Pedal11 from './assets/pedals/pedal11.jpeg'
+import Pedal12 from './assets/pedals/pedal12.jpeg'
 
 
 const App = () => {
@@ -60,8 +100,24 @@ const App = () => {
   const [user, setUser] = useState(authService.getUser())
   console.log(user)
 
+  const rigImages = [
+    Rig1, Rig2, Rig3, Rig4, Rig5, Rig6, Rig7, Rig8, Rig9, Rig10, Rig11, Rig12
+  ]
+
+  const ampImages = [
+
+  ]
+
+  const guitarImages = [
+    Guitar1, Guitar2, Guitar3, Guitar4, Guitar5, Guitar6, Guitar7, Guitar8, Guitar9, Guitar10, Guitar11, Guitar12
+  ]
+
+  const pedalImages = [
+    Pedal1, Pedal2, Pedal3, Pedal4, Pedal5, Pedal6, Pedal7, Pedal8, Pedal9, Pedal10, Pedal11, Pedal12
+  ]
+
   const gearImages = [
-    AmpCombo, AmpCombo2, AmpJcm, JazzBass, JazzBass2, PacoBass, PrecisionBass, GuitarExplorer, GuitarLesPaul, GuitarSG, GuitarSemiHollow, GuitarStrat, CoolPedal, MXRPedal, BossPedal, BigMuffPedal,
+    AmpCombo, AmpCombo2, AmpJcm, JazzBass, JazzBass2, PacoBass, PrecisionBass, GuitarExplorer, GuitarLesPaul, GuitarSG, GuitarSemiHollow, GuitarStrat,
   ]
 
   useEffect(() => {
@@ -188,7 +244,7 @@ const App = () => {
         <Route path="/rigs" element={
             <ProtectedRoute user={user}>
               <RigList rigs={rigs} 
-              gearImages={gearImages} />
+              rigImages={rigImages} />
             </ProtectedRoute>
           } />
         <Route path="/amps" element={
@@ -199,19 +255,19 @@ const App = () => {
           } />
         <Route path="/guitars" element={
             <ProtectedRoute user={user}>
-              <GuitarList guitars={guitars} gearImages={gearImages} />
+              <GuitarList guitars={guitars} guitarImages={guitarImages} />
             </ProtectedRoute>
           } /> 
         <Route path="/pedals" element={
             <ProtectedRoute user={user}>
               <PedalList 
                 pedals={pedals} 
-                gearImages={gearImages} />
+                pedalImages={pedalImages} />
             </ProtectedRoute>
           } />
         <Route path="/rigs/:id" element={
           <ProtectedRoute user={user}>
-            <RigDetails gearImages={gearImages} 
+            <RigDetails rigImages={rigImages} 
               user={user} />
           </ProtectedRoute>
         } />
@@ -223,13 +279,13 @@ const App = () => {
         } />
         <Route path="/guitars/:id" element={
           <ProtectedRoute user={user}>
-            <GuitarDetails gearImages={gearImages} 
+            <GuitarDetails guitarImages={guitarImages} 
               user={user} />
           </ProtectedRoute>
         } />
         <Route path="/pedals/:id" element={
           <ProtectedRoute user={user}>
-            <PedalDetails gearImages={gearImages} 
+            <PedalDetails pedalImages={pedalImages} 
               user={user} />
           </ProtectedRoute>
         } />
