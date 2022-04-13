@@ -3,19 +3,21 @@ import { useParams } from 'react-router-dom'
 import './RigDetails.css'
 
 // Services
-import { getOne, assocGuitar } from '../../services/rigs'
+import { getOne, assocGuitar, assocPedal } from '../../services/rigs'
 
 // Components
 import RigActions from './components/RigActions'
-// import GuitarCollection from './components/GuitarCollection'
+import GuitarCollection from './components/GuitarCollection'
+import PedalCollection from './components/PedalCollection'
 
 const RigDetails = ({ gearImages, user }) => {
   const { id } = useParams()
   const [rig, setRig] = useState(null)
   const [availableGuitars, setAvailableGuitars] = useState([])
+  const [availablePedals, setAvailablePedals] = useState([])
   const idx = Math.floor(Math.random() * (gearImages.length))
 
-  const addToCollection = async (e) => {
+  const addGuitarToCollection = async (e) => {
     e.preventDefault()
     const guitarId = parseInt(e.target.id)
     const updatedRig = await assocGuitar(rig.id, guitarId)
@@ -23,12 +25,20 @@ const RigDetails = ({ gearImages, user }) => {
     setRig({...updatedRig})
   }
 
+  const addPedalToCollection = async (e) => {
+    e.preventDefault()
+    const pedalId = parseInt(e.target.id)
+    const updatedRig = await assocPedal(rig.id, pedalId)
+    setAvailablePedals(availablePedals.filter(pedal => pedalId !== pedal.id))
+    setRig({...updatedRig})
+  }
+
   useEffect(() => {
     const fetchOne = async () => {
       const data = await getOne(id)
       setRig(data.rig)
-      // setAvailableAmps(data.available_amps)
       setAvailableGuitars(data.available_guitars)
+      setAvailablePedals(data.available_pedals)
     }
     fetchOne()
   }, [id])
@@ -48,14 +58,22 @@ const RigDetails = ({ gearImages, user }) => {
         </div>
       </section> 
       {/* - display rig -  */}
-      {/* <div className="guitar-container">
+      <div className="guitar-container">
         <GuitarCollection
           rig={rig}
           user={user}
           guitars={availableGuitars}
-          addToCollection={addToCollection}
+          addGuitarToCollection={addGuitarToCollection}
         /> 
-      </div> */}
+      </div>
+      <div className="guitar-container">
+        <PedalCollection
+          rig={rig}
+          user={user}
+          pedals={availablePedals}
+          addPedalToCollection={addPedalToCollection}
+        /> 
+      </div>
     </>
   )
 }
