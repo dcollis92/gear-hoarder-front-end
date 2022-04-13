@@ -10,10 +10,19 @@ import Profiles from './pages/Profiles/Profiles'
 import RigForm from './pages/Forms/RigForm'
 import RigList from './pages/RigList/RigList'
 import RigDetails from './pages/RigDetails/RigDetails'
+import AmpForm from './pages/Forms/AmpForm'
+import AmpList from './pages/AmpList/AmpList'
+import AmpDetails from './pages/AmpDetails/AmpDetails'
+import GuitarForm from './pages/Forms/GuitarForm'
+import GuitarList from './pages/GuitarList/GuitarList'
+import GuitarDetails from './pages/GuitarDetails/GuitarDetails'
+import PedalForm from './pages/Forms/PedalForm'
+import PedalList from './pages/PedalList/PedalList'
+import PedalDetails from './pages/PedalDetails/PedalDetails'
 import RigConfirmation from './pages/Confirmation/RigConfirmation'
-// import AmpConfirmation from './pages/Confirmation/AmpConfirmation'
-// import GuitarConfirmation from './pages/Confirmation/GuitarConfirmation'
-// import PedalConfirmation from './pages/Confirmation/PedalConfirmation'
+import AmpConfirmation from './pages/Confirmation/AmpConfirmation'
+import GuitarConfirmation from './pages/Confirmation/GuitarConfirmation'
+import PedalConfirmation from './pages/Confirmation/PedalConfirmation'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 // Services
@@ -121,23 +130,38 @@ const App = () => {
     )))
   }
 
-  // const updateGuitar = async (guitarData) => {
-  //   const updatedGuitar= await guitarService.update(guitarData)
-  //   setGuitars(guitars.map((guitar) => (
-  //     guitar.id === updatedGuitar.id ? updatedGuitar : guitar
-  //   )))
-  // }
+  const updateGuitar = async (guitarData) => {
+    const updatedGuitar= await guitarService.update(guitarData)
+    setGuitars(guitars.map((guitar) => (
+      guitar.id === updatedGuitar.id ? updatedGuitar : guitar
+    )))
+  }
 
-  // const updatePedal = async (pedalData) => {
-  //   const updatedPedal = await pedalService.update(pedalData)
-  //   setPedal(pedals.map((pedal) => (
-  //     pedal.id === updatedPedal.id ? updatedPedal : pedal
-  //   )))
-  // }
+  const updatePedal = async (pedalData) => {
+    const updatedPedal = await pedalService.update(pedalData)
+    setPedals(pedals.map((pedal) => (
+      pedal.id === updatedPedal.id ? updatedPedal : pedal
+    )))
+  }
 
   const deleteRig = async (id) => {
     await rigService.deleteOne(id)
     setRigs(rigs.filter(rig => rig.id !== parseInt(id)))
+  }
+
+  const deleteAmp = async (id) => {
+    await ampService.deleteOne(id)
+    setAmps(amps.filter(amp => amp.id !== parseInt(id)))
+  }
+
+  const deleteGuitar = async (id) => {
+    await guitarService.deleteOne(id)
+    setGuitars(guitars.filter(guitar => guitar.id !== parseInt(id)))
+  }
+
+  const deletePedal = async (id) => {
+    await pedalService.deleteOne(id)
+    setPedals(pedals.filter(pedal => pedal.id !== parseInt(id)))
   }
 
   const handleLogout = () => {
@@ -175,30 +199,30 @@ const App = () => {
               />
             </ProtectedRoute>
           } />
-        {/* <Route path="/amps" element={
+        <Route path="/amps" element={
             <ProtectedRoute user={user}>
               <AmpList 
                 amps={amps} 
                 gearImages={gearImages} 
               />
             </ProtectedRoute>
-          } /> */}
-        {/* <Route path="/guitars" element={
+          } />
+        <Route path="/guitars" element={
             <ProtectedRoute user={user}>
               <GuitarList 
                 guitars={guitars} 
                 gearImages={gearImages} 
               />
             </ProtectedRoute>
-          } /> */}
-        {/* <Route path="/pedals" element={
+          } /> 
+        <Route path="/pedals" element={
             <ProtectedRoute user={user}>
               <PedalList 
                 pedals={amps} 
                 gearImages={gearImages} 
               />
             </ProtectedRoute>
-          } /> */}
+          } />
         <Route path="/rigs/:id" element={
           <ProtectedRoute user={user}>
             <RigDetails 
@@ -206,27 +230,27 @@ const App = () => {
               user={user} />
           </ProtectedRoute>
         } />
-        {/* <Route path="/amps/:id" element={
+        <Route path="/amps/:id" element={
           <ProtectedRoute user={user}>
             <AmpDetails 
               gearImages={gearImages} 
               user={user} />
           </ProtectedRoute>
-        } /> */}
-        {/* <Route path="/guitars/:id" element={
+        } />
+        <Route path="/guitars/:id" element={
           <ProtectedRoute user={user}>
             <GuitarDetails 
               gearImages={gearImages} 
               user={user} />
           </ProtectedRoute>
-        } /> */}
-        {/* <Route path="/pedals/:id" element={
+        } />
+        <Route path="/pedals/:id" element={
           <ProtectedRoute user={user}>
             <PedalDetails 
               gearImages={gearImages} 
               user={user} />
           </ProtectedRoute>
-        } /> */}
+        } />
         <Route path="/rigs/new" element={
           <ProtectedRoute user={user}>
             <RigForm 
@@ -234,67 +258,67 @@ const App = () => {
             user={user} />
           </ProtectedRoute>
         } />
-        {/* <Route path="/amps/new" element={
+        <Route path="/amps/new" element={
           <ProtectedRoute user={user}>
             <AmpForm 
             addAmp={addAmp} 
             user={user} />
           </ProtectedRoute>
-        } /> */}
-        {/* <Route path="/guitars/new" element={
+        } />
+        <Route path="/guitars/new" element={
           <ProtectedRoute user={user}>
             <GuitarForm 
             addGuitar={addGuitar} 
             user={user} />
           </ProtectedRoute>
-        } /> */}
-        {/* <Route path="/pedals/new" element={
+        } />
+        <Route path="/pedals/new" element={
           <ProtectedRoute user={user}>
             <PedalForm 
             addPedal={addPedal} 
             user={user} />
           </ProtectedRoute>
-        } /> */}
+        } />
         <Route path="/rigs/:id/edit" element={
           <ProtectedRoute user={user}>
             <RigForm rigs={rigs} updateRig={updateRig} user={user} />
           </ProtectedRoute>
         } />
-        {/* <Route path="/amps/:id/edit" element={
+        <Route path="/amps/:id/edit" element={
           <ProtectedRoute user={user}>
             <AmpForm amps={amps} updateAmp={updateAmp} user={user} />
           </ProtectedRoute>
-        } /> */}
-        {/* <Route path="/guitars/:id/edit" element={
+        } />
+        <Route path="/guitars/:id/edit" element={
           <ProtectedRoute user={user}>
             <GuitarForm guitars={guitars} updateGuitar={updateGuitar} user={user} />
           </ProtectedRoute>
-        } /> */}
-        {/* <Route path="/pedals/:id/edit" element={
+        } />
+        <Route path="/pedals/:id/edit" element={
           <ProtectedRoute user={user}>
-            <PedalsForm pedals={pedals} updatePedals={updatePedals} user={user} />
+            <PedalForm pedals={pedals} updatePedal={updatePedal} user={user} />
           </ProtectedRoute>
-        } /> */}
+        } />
         <Route path="/rigs/:id/confirmation" element={
           <ProtectedRoute user={user}>
             <RigConfirmation deleteRig={deleteRig} user={user} />
           </ProtectedRoute>
         } />
-        {/* <Route path="/amps/:id/confirmation" element={
+        <Route path="/amps/:id/confirmation" element={
           <ProtectedRoute user={user}>
             <AmpConfirmation deleteAmp={deleteAmp} user={user} />
           </ProtectedRoute>
-        } /> */}
-        {/* <Route path="/guitars/:id/confirmation" element={
+        } />
+        <Route path="/guitars/:id/confirmation" element={
           <ProtectedRoute user={user}>
             <GuitarConfirmation deleteGuitar={deleteGuitar} user={user} />
           </ProtectedRoute>
-        } /> */}
-        {/* <Route path="/pedals/:id/confirmation" element={
+        } />
+        <Route path="/pedals/:id/confirmation" element={
           <ProtectedRoute user={user}>
             <PedalConfirmation deletePedal={deletePedal} user={user} />
           </ProtectedRoute>
-        } /> */}
+        } />
       </Routes>
     </>
   )
