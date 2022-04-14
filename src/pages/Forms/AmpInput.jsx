@@ -41,16 +41,20 @@ const AmpInput = ({ form, handleChange }) => {
         type="text" 
         placeholder="100" 
         autoComplete="off" />
+      {(form.type !== "Cabinet") &&
+      <>
       <label htmlFor="powerType">Power Type</label>
       <select value={form.powerType} 
         onChange={handleChange}
         id="powerType" required 
         name="powerType">
-          <option value="Select"></option>
+        <option value="Select"></option>
         <option value="Tube">Tube</option>
         <option value="Solid State">Solid State</option>
         <option value="Hybrid">Hybrid</option>
       </select> 
+      </>
+      }
       {(form.type === "Combo" || form.type === "Cabinet") &&
       <>
       <label htmlFor="speakerSize">Speaker Size</label>
@@ -71,6 +75,8 @@ const AmpInput = ({ form, handleChange }) => {
         type="text" 
         placeholder="2" 
         autoComplete="off" />
+      </>
+      } 
       <label htmlFor="ohmRating">Ohm Rating</label>
       <select
         value={form.ohmRating} 
@@ -82,9 +88,7 @@ const AmpInput = ({ form, handleChange }) => {
         <option value="8">8</option> 
         <option value="16">16</option> 
         <option value="Multi">Multi</option> 
-      </select>
-      </>
-      }          
+      </select>         
       <label htmlFor="color">Color</label>
       <input
         value={form.color ? form.color : ''} 
