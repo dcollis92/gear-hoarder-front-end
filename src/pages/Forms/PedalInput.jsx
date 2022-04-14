@@ -34,8 +34,8 @@ const PedalInput = ({ form, handleChange }) => {
         onChange={handleChange} 
         id="color" required 
         name="color" 
-        type="color" 
-        placeholder="Color" 
+        type="text" 
+        placeholder="Green" 
         autoComplete="off" />
       <label htmlFor="year">Year</label>
       <input

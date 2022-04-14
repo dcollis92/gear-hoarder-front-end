@@ -7,7 +7,7 @@ const PedalConfirmation = (props) => {
   const { id } = useParams()
   const { state } = useLocation()
   const navigate = useNavigate()
-  const resource = props.deletePedal
+  const resource = 'pedals'
 
   const handleDelete = () => {
     props.deletePedal && props.deletePedal(id)    

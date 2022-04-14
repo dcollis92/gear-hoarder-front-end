@@ -37,8 +37,8 @@ const GuitarInput = ({ form, handleChange }) => {
         onChange={handleChange} 
         id="color"
         required name="color" 
-        type="color" 
-        placeholder="Color" 
+        type="text" 
+        placeholder="Sunburst" 
         autoComplete="off" />
       <label htmlFor="year">Year</label>
       <input
