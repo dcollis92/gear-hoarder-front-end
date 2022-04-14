@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const RigCard = ({ rig, rigImages }) => {
 
-  const idx = Math.floor(Math.random() * (rigImages.length))
+  let idx = Math.floor(Math.random() * (rigImages.length))
 
   return (
     <Link to={`/rigs/${rig.id}`} className="card">

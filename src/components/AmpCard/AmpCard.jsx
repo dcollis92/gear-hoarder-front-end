@@ -1,16 +1,22 @@
 import { Link } from 'react-router-dom'
-import { hexToRGBA } from './Utils'
 
-const ampCard = ({ amp, isCard }) => {
-  const cardStyle = {
-    borderColor: `${amp.color}`,
-    backgroundColor: amp.color && hexToRGBA(amp.color)
-  }
+const ampCard = ({ amp, ampImages }) => {
+
+
+  let idx = Math.floor(Math.random() * (ampImages.length))
+
 
   return (
-    <Link to={`/amps/${amp.id}`} className="amp-card" style={cardStyle}>
-      {isCard && <><h2>{amp.name}</h2><p>{amp.description}</p></>}
-    </Link>
+    <Link to={`/amps/${amp.id}`} className="card">
+    <div className="card-content">
+      <div className="card-img-container">
+        <img className="usr-img" src={ampImages[idx]} alt={`${amp.model}`} />
+      </div>
+      <h2 className="card-title">{amp.make} {amp.model}</h2>
+      <p></p>
+      <p><small>{amp.description}</small></p>
+    </div>
+  </Link>
   )
 }
 
