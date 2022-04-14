@@ -6,8 +6,8 @@ const AmpInput = ({ form, handleChange }) => {
         onChange={handleChange} 
         id="type" required 
         name="type">
-        <option value="Combo">Combo</option>
         <option value="Head">Head</option>
+        <option value="Combo">Combo</option>
         <option value="Cabinet">Cabinet</option>
         <option value="Power Amp">Power Amp</option>
         <option value="Pre-Amp">Pre-Amp</option>
@@ -48,7 +48,7 @@ const AmpInput = ({ form, handleChange }) => {
         <option value="Tube">Tube</option>
         <option value="Solid State">Solid State</option>
         <option value="Hybrid">Hybrid</option>
-      </select>   
+      </select> 
       {form.type === "Combo" &&
       <>
       <label htmlFor="speakerSize">Speaker Size</label>
