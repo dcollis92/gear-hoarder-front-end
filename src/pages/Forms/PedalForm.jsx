@@ -43,7 +43,8 @@ const PedalForm = (props) => {
 
   useEffect(() => {
     const fetchOne = async () => {
-      const pedalData = await getOne(id)
+      const data = await getOne(id)
+      const pedalData = data.pedal
       setForm({
         id: pedalData.id,
         type: pedalData.type,
