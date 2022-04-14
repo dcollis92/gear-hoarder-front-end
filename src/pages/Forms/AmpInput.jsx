@@ -51,7 +51,7 @@ const AmpInput = ({ form, handleChange }) => {
         <option value="Solid State">Solid State</option>
         <option value="Hybrid">Hybrid</option>
       </select> 
-      {form.type === "Combo" &&
+      {(form.type === "Combo" || form.type === "Cabinet") &&
       <>
       <label htmlFor="speakerSize">Speaker Size</label>
       <input
