@@ -6,6 +6,7 @@ const AmpInput = ({ form, handleChange }) => {
         onChange={handleChange} 
         id="type" required 
         name="type">
+        <option value="Select"></option>
         <option value="Head">Head</option>
         <option value="Combo">Combo</option>
         <option value="Cabinet">Cabinet</option>
@@ -45,6 +46,7 @@ const AmpInput = ({ form, handleChange }) => {
         onChange={handleChange}
         id="powerType" required 
         name="powerType">
+          <option value="Select"></option>
         <option value="Tube">Tube</option>
         <option value="Solid State">Solid State</option>
         <option value="Hybrid">Hybrid</option>
@@ -75,6 +77,7 @@ const AmpInput = ({ form, handleChange }) => {
         onChange={handleChange} 
         id="ohmRating" required 
         name="ohmRating">
+        <option value="Select"></option>
         <option value="4">4</option> 
         <option value="8">8</option> 
         <option value="16">16</option> 
