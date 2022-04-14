@@ -115,10 +115,6 @@ const App = () => {
     Pedal1, Pedal2, Pedal3, Pedal4, Pedal5, Pedal6, Pedal7, Pedal8, Pedal9, Pedal10, Pedal11, Pedal12
   ]
 
-  const gearImages = [
-    AmpCombo, AmpCombo2, AmpJcm, JazzBass, JazzBass2, PacoBass, PrecisionBass, GuitarExplorer, GuitarLesPaul, GuitarSG, GuitarSemiHollow, GuitarStrat,
-  ]
-
   useEffect(() => {
     const fetchData = async () => {
       const data = await rigService.getAll()
