@@ -9,7 +9,7 @@ const GuitarInput = ({ form, handleChange }) => {
         <option selected value="Electric">Electric</option>
         <option value="Acoustic">Acoustic</option>
         <option value="Bass">Bass</option>
-        <option value="Acoustic Bass">Power Amp</option>
+        <option value="Acoustic Bass">Acoustic Bass</option>
         <option value="Baritone">Baritone</option>
       </select>
       <br/><br/>       
