@@ -10,7 +10,6 @@ import { getOne } from '../../services/rigs'
 import RigInput from './RigInput'
 
 // Image Assets
-import AmpCombo from '../../assets/amp-combo.png'
 
 const RigForm = (props) => {
   const { id } = useParams()
@@ -50,7 +49,6 @@ const RigForm = (props) => {
         : 
         <>
           <h1>Add A Rig</h1>
-          <img src={AmpCombo} alt="A combo amp" />
         </>
         }
       </div>
