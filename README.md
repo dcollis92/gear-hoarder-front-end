@@ -67,7 +67,10 @@ Gear Hoarder is a React Built Web App utilizing a Flask API backend. Gear Hoarde
 
 ## ⚙ Ice Box :icecream:
 
-- [ ] Create pages for microphones and other instruments
+- [ ] Refactor app to display only amps, instruments and pedals belonging to logged in user
+- [ ] Implement ability to view other users rigs
+- [ ] Implement ability to remove guitars, amps and pedals from a rig
+- [ ] Create pages for microphones, drums, accesories and other instruments that also demonstrate full CRUD
 - [ ] Users can upload photos of their gear
 - [ ] Light/Dark Mode
 - [ ] Further develop Safari + mobile functionality
