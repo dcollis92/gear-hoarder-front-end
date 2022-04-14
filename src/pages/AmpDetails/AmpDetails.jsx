@@ -9,7 +9,7 @@ import { getOne } from '../../services/amps'
 import AmpActions from './components/AmpActions'
 import AmpCard from '../../components/AmpCard/AmpCard'
 
-const AmpDetails = ({ user }) => {
+const AmpDetails = ({ user, ampImages }) => {
   const { id } = useParams()
   const [amp, setAmp] = useState(null)
 
@@ -26,11 +26,11 @@ const AmpDetails = ({ user }) => {
     <>
       <section className="amp-details-container">
         <div className="amp-img">
-          <AmpCard amp={amp} />
+          <AmpCard amp={amp} ampImages={ampImages} />
         </div>
         <div className="amp-details">
           <h1>{amp.make} {amp.model}</h1>
-          <h2>{amp.model}</h2>
+          <h2>{amp.year}</h2>
           <p>{amp.description}</p>
           <AmpActions amp={amp} user={user} />
         </div>

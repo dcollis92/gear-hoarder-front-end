@@ -1,17 +1,22 @@
 import { Link } from 'react-router-dom'
-import { hexToRGBA } from './Utils'
 
-const pedalCard = ({ pedal, isCard }) => {
-  const cardStyle = {
-    borderColor: `${pedal.color}`,
-    backgroundColor: pedal.color && hexToRGBA(pedal.color)
-  }
+const PedalCard = ({ pedal, pedalImages }) => {
+
+  let idx = Math.floor(Math.random() * (pedalImages.length))
 
   return (
-    <Link to={`/pedals/${pedal.id}`} className="pedal-card" style={cardStyle}>
-      {isCard && <><h2>{pedal.name}</h2><p>{pedal.description}</p></>}
-    </Link>
+    <Link to={`/pedals/${pedal.id}`} className="card">
+    <div className="card-content">
+      <div className="card-img-container">
+        <img className="usr-img" src={pedalImages[idx]} 
+        alt={`${pedal.make} ${pedal.model}`} />
+      </div>
+      <h2 className="card-title">{pedal.make} {pedal.model}</h2>
+      <p></p>
+      <p><small>{pedal.description}</small></p>
+    </div>
+  </Link>
   )
 }
 
-export default pedalCard
+export default PedalCard

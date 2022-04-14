@@ -1,17 +1,22 @@
 import { Link } from 'react-router-dom'
-import { hexToRGBA } from './Utils'
 
-const guitarCard = ({ guitar, isCard }) => {
-  const cardStyle = {
-    borderColor: `${guitar.color}`,
-    backgroundColor: guitar.color && hexToRGBA(guitar.color)
-  }
+const GuitarCard = ({ guitar, guitarImages }) => {
+
+  let idx = Math.floor(Math.random() * (guitarImages.length))
 
   return (
-    <Link to={`/guitars/${guitar.id}`} className="guitar-card" style={cardStyle}>
-      {isCard && <><h2>{guitar.name}</h2><p>{guitar.description}</p></>}
-    </Link>
+    <Link to={`/guitars/${guitar.id}`} className="card">
+    <div className="card-content">
+      <div className="card-img-container">
+        <img className="usr-img" src={guitarImages[idx]} 
+        alt={`${guitar.make} ${guitar.model}`} />
+      </div>
+      <h2 className="card-title">{guitar.make} {guitar.model}</h2>
+      <p></p>
+      <p><small>{guitar.description}</small></p>
+    </div>
+  </Link>
   )
 }
 
-export default guitarCard
+export default GuitarCard

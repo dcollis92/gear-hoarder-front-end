@@ -97,7 +97,7 @@ const App = () => {
   const [guitars, setGuitars] = useState([])
   const [pedals, setPedals] = useState([])
   const [user, setUser] = useState(authService.getUser())
-  console.log(user)
+
 
   const rigImages = [
     Rig1, Rig2, Rig3, Rig4, Rig5, Rig6, Rig7, Rig8, Rig9, Rig10, Rig11, Rig12
@@ -256,8 +256,7 @@ const App = () => {
           } /> 
         <Route path="/pedals" element={
             <ProtectedRoute user={user}>
-              <PedalList 
-                pedals={pedals} 
+              <PedalList pedals={pedals} 
                 pedalImages={pedalImages} />
             </ProtectedRoute>
           } />
