@@ -1,6 +1,7 @@
+import './LoginForm.scss'
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import styles from './LoginForm.module.css'
+import { useNavigate } from 'react-router-dom'
+import { Form, Button } from 'react-bootstrap'
 import * as authService from '../../services/authService'
 
 const LoginForm = props => {
@@ -27,40 +28,53 @@ const LoginForm = props => {
   }
 
   return (
-    <form
-      autoComplete="off"
-      onSubmit={handleSubmit}
-      className={styles.container}
-    >
-      <div className={styles.inputContainer}>
-        <label htmlFor="email" className={styles.label}>Email</label>
-        <input
-          type="text"
+    <main className='login-form'>
+      <div className='div'>
+        <Form 
           autoComplete="off"
-          id="email"
-          value={formData.email}
-          name="email"
-          onChange={handleChange}
-        />
+          onSubmit={handleSubmit}
+          className='container'>
+            <Form.Group className="mb-3">
+            <Form.Label 
+              htmlFor="email" 
+              className='label'>
+              Email Address
+            </Form.Label>
+            <Form.Control 
+              type="email" 
+              autoComplete="off"
+              id="email"
+              value={formData.email}
+              name="email"
+              onChange={handleChange}
+              placeholder="Enter Email" />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label 
+                htmlFor="password"
+                className='label'>
+                Password
+              </Form.Label>
+              <Form.Control 
+                type="password" 
+                autoComplete="off"
+                id="password"
+                value={formData.pw}
+                name="password"
+                onChange={handleChange}
+                placeholder="Enter Password" />
+            </Form.Group>
+            <Button 
+              className='button'
+              variant="primary" 
+              type="submit">
+              Log In
+            </Button>
+            <Button className='button' 
+              href="/">Cancel</Button>
+        </Form>
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Password</label>
-        <input
-          type="password"
-          autoComplete="off"
-          id="password"
-          value={formData.password}
-          name="password"
-          onChange={handleChange}
-        />
-      </div>
-      <div>
-        <button className={styles.button}>Log In</button>
-        <Link to="/">
-          <button>Cancel</button>
-        </Link>
-      </div>
-    </form>
+    </main>
   )
 }
 

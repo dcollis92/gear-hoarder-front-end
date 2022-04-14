@@ -153,16 +153,6 @@ nav a {
     padding-top: 3px;
   }
 
-  nav {
-    display: flex;
-    margin-left: auto;
-    justify-content: center;
-  }
-
-  nav ul {
-    flex-wrap: nowrap;
-  }
-
   .header-logo-container {
     width: 213px;
   }
