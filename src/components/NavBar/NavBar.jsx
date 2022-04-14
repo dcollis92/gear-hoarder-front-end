@@ -16,28 +16,28 @@ const NavBar = ({ user, handleLogout }) => {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
           <Nav.Link href="/rigs">
-            {/* <i className="fas fa-record-vinyl"></i>  */}
+            <i class="fas fa-circle-right"></i>
             {' '}All Rigs</Nav.Link>
           <Nav.Link href="/amps">
-            {/* <i className="fas fa-user"></i> */}
+            <i class="fas fa-circle-right"></i>
             {' '}All Amps</Nav.Link>
           <Nav.Link href="/guitars">
-            {/* <i className="fas fa-unlock"></i> */}
+            <i class="fas fa-circle-right"></i>
             {' '}All Guitars</Nav.Link>
           <Nav.Link href="/pedals">
-            {/* <i className="fas fa-unlock"></i> */}
+            <i class="fas fa-circle-right"></i>
             {' '}All Pedals</Nav.Link>
           <Nav.Link href="/rigs/new">
-            {/* <i className="fas fa-unlock"></i> */}
+            <i class="fas fa-circle-plus"></i>
             {' '}Add Rig</Nav.Link>  
           <Nav.Link href="/amps/new">
-            {/* <i className="fas fa-unlock"></i> */}
+            <i class="fas fa-circle-plus"></i>
             {' '}Add Amp</Nav.Link>
           <Nav.Link href="/guitars/new">
-            {/* <i className="fas fa-unlock"></i> */}
+            <i class="fas fa-circle-plus"></i>
             {' '}Add Guitar</Nav.Link>
           <Nav.Link href="/pedals/new">
-            {/* <i className="fas fa-unlock"></i> */}
+            <i class="fas fa-circle-plus"></i>
             {' '}Add Pedal</Nav.Link>
           <Nav.Link href="" onClick={handleLogout}>
             <i className="fas fa-right-from-bracket"></i>
