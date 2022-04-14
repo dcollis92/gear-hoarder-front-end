@@ -12,8 +12,6 @@ const GuitarCard = ({ guitar, guitarImages }) => {
         alt={`${guitar.make} ${guitar.model}`} />
       </div>
       <h2 className="card-title">{guitar.make} {guitar.model}</h2>
-      <p></p>
-      <p><small>{guitar.description}</small></p>
     </div>
   </Link>
   )

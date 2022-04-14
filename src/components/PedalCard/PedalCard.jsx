@@ -12,8 +12,6 @@ const PedalCard = ({ pedal, pedalImages }) => {
         alt={`${pedal.make} ${pedal.model}`} />
       </div>
       <h2 className="card-title">{pedal.make} {pedal.model}</h2>
-      <p></p>
-      <p><small>{pedal.description}</small></p>
     </div>
   </Link>
   )

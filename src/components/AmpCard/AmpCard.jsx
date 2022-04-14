@@ -12,8 +12,6 @@ const AmpCard = ({ amp, ampImages }) => {
         alt={`${amp.make} ${amp.model}`} />
       </div>
       <h2 className="card-title">{amp.make} {amp.model}</h2>
-      <p></p>
-      <p><small>{amp.description}</small></p>
     </div>
   </Link>
   )
