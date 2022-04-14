@@ -48,7 +48,8 @@ const AmpForm = (props) => {
 
   useEffect(() => {
     const fetchOne = async () => {
-      const ampData = await getOne(id)
+      const data = await getOne(id)
+      const ampData = data.amp
       setForm({
         id: ampData.id,
         type: ampData.type,
@@ -66,6 +67,7 @@ const AmpForm = (props) => {
         onLoan: ampData.on_loan
       })
     }
+    console.log(id)
     id ? fetchOne() : setForm({ isWorking: false, onLoan: false })
     return () => setForm({})
   }, [id])
