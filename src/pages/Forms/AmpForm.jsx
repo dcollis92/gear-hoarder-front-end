@@ -86,7 +86,7 @@ const AmpForm = (props) => {
       <section className="form-container">
         <form onSubmit={handleSubmit}>
           <AmpInput form={form} handleChange={handleChange} />
-          <button type="submit" className="btn submit">Submit!</button>
+          <button type="submit" className="btn submit">Submit</button>
         </form>
       </section>
     </>
