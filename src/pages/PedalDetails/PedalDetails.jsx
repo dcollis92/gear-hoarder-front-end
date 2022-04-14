@@ -9,7 +9,7 @@ import { getOne } from '../../services/pedals'
 import PedalActions from './components/PedalActions'
 import PedalCard from '../../components/PedalCard/PedalCard'
 
-const PedalDetails = ({ user }) => {
+const PedalDetails = ({ user, pedalImages }) => {
   const { id } = useParams()
   const [pedal, setPedal] = useState(null)
 
@@ -26,7 +26,7 @@ const PedalDetails = ({ user }) => {
     <>
       <section className="pedal-details-container">
         <div className="pedal-img">
-          <PedalCard pedal={pedal} />
+          <PedalCard pedal={pedal} pedalImages={pedalImages} />
         </div>
         <div className="pedal-details">
           <h1>{pedal.name}</h1>

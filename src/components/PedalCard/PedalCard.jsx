@@ -1,16 +1,15 @@
 import { Link } from 'react-router-dom'
 
-const pedalCard = ({ pedal, pedalImages }) => {
-
+const PedalCard = ({ pedal, pedalImages }) => {
 
   let idx = Math.floor(Math.random() * (pedalImages.length))
-
 
   return (
     <Link to={`/pedals/${pedal.id}`} className="card">
     <div className="card-content">
       <div className="card-img-container">
-        <img className="usr-img" src={pedalImages[idx]} alt={`${pedal.model}`} />
+        <img className="usr-img" src={pedalImages[idx]} 
+        alt={`${pedal.make} ${pedal.model}`} />
       </div>
       <h2 className="card-title">{pedal.make} {pedal.model}</h2>
       <p></p>
@@ -20,4 +19,4 @@ const pedalCard = ({ pedal, pedalImages }) => {
   )
 }
 
-export default pedalCard
+export default PedalCard

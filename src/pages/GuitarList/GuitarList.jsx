@@ -1,11 +1,11 @@
-import './guitarList.css'
+import './GuitarList.css'
 
 // Image Assets
 
 // Components
 import GuitarCard from '../../components/GuitarCard/GuitarCard'
 
-const guitarList = ({guitars, guitarImages}) => {
+const GuitarList = ({guitars, guitarImages}) => {
   return (
     <>
       <section className="page-header">
@@ -21,4 +21,4 @@ const guitarList = ({guitars, guitarImages}) => {
   )
 }
 
-export default guitarList
+export default GuitarList
