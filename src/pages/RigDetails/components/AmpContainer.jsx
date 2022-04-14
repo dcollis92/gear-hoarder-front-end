@@ -5,7 +5,7 @@ const AmpContainer = ({ amp, addAmpToCollection }) => {
     <div key={amp.id} className="amp-container">
       <div className="color-block" style={{ backgroundColor: amp.color }}></div>
       <Link to={`/amps/${amp.id}`}>
-        <p>{amp.name}</p>
+        <p>{amp.make} {amp.model}</p>
       </Link>
       {addAmpToCollection &&
         <form id={amp.id} onSubmit={addAmpToCollection}>
