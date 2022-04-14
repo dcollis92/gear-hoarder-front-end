@@ -1,0 +1,2 @@
+NORMALIZE DROPDOWN VIEWS ON GUITAR AND AMP INPUTS/form
+-dropdowns are a little smaller than other input fields
