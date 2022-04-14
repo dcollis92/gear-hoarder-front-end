@@ -30,7 +30,7 @@ body {
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
   min-height: 100vh;
-  background-color: #293845;
+  background-color:#0d1117;
   color: #dfe6ed;
   --font-l: 1.8rem;
   --font-xl: 2.4rem;
@@ -49,7 +49,7 @@ body {
   --nav-bg-ff: rgba(179, 179, 179, 0.9);
   --link-hover-color: rgb(0, 37, 131);
   --button-bg-hover: rgb(101, 0, 0);
-  --borders: rgb(0, 0, 0) solid 2px;
+  --borders: #dfe6ed solid 2px;
 }
 
 /* header {
