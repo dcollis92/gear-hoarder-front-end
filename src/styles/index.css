@@ -42,7 +42,7 @@ body {
   --submit: rgb(26, 128, 0);
   --danger: rgb(0, 0, 0);
   --secondary: rgb(57, 57, 57);
-  --text-color: rgb(255, 255, 255);
+  --text-color: rgb(0, 0, 0);
   --button-bg: rgb(255, 255, 255);
   --nav-bg: rgba(111, 111, 111, 0.7);
   --nav-bg-ff: rgba(179, 179, 179, 0.9);

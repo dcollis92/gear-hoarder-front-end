@@ -11,7 +11,6 @@ const RigCard = ({ rig, rigImages }) => {
           <img className="usr-img" src={rigImages[idx]} alt={`${rig.name}`} />
         </div>
         <h2 className="card-title">{rig.name}</h2>
-        <p></p>
         <p><small>{rig.description}</small></p>
       </div>
     </Link>

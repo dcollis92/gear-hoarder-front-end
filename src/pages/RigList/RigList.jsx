@@ -17,6 +17,7 @@ const RigList = ({rigs, rigImages}) => {
           rigImages={rigImages} />
         ))}
       </section>
+      
     </>
   )
 }
