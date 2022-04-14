@@ -1,29 +1,24 @@
-import './GuitarList.css'
+import './guitarList.css'
 
 // Image Assets
-import GuitarExplorer from '../../assets/guitar-explorer.png'
-import GibsonLesPaul from '../../assets/guitar-lespaul.png'
-import GuitarSG from '../../assets/guitar-sg.png'
 
 // Components
 import GuitarCard from '../../components/GuitarCard/GuitarCard'
 
-const GuitarList = (props) => {
+const guitarList = ({guitars, guitarImages}) => {
   return (
     <>
       <section className="page-header">
-        <h1>Guitar List</h1>
-        <img src={GuitarExplorer} alt="a gibson explorer" />
-        <img src={GibsonLesPaul} alt="a gibson les paul" />
-        <img src={GuitarSG} alt="a gibson sg" />
+        <h1>Guitars</h1>
       </section>
       <section className="guitar-card-container">
-        {props.guitars.map((guitar) => (
-          <GuitarCard key={guitar.id} guitar={guitar} isCard={true} />
+        {guitars.map((guitar) => (
+          <GuitarCard key={guitar.id} guitar={guitar} 
+          guitarImages={guitarImages} />
         ))}
       </section>
     </>
   )
 }
 
-export default GuitarList
+export default guitarList

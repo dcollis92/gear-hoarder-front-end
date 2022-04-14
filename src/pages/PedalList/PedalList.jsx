@@ -9,7 +9,7 @@ const PedalList = ({pedals, pedalImages}) => {
   return (
     <>
       <section className="page-header">
-        <h1>pedal List</h1>
+        <h1>Pedals</h1>
       </section>
       <section className="pedal-card-container">
         {pedals.map((pedal) => (

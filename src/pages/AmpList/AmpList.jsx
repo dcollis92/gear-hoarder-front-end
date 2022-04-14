@@ -9,7 +9,7 @@ const AmpList = ({amps, ampImages}) => {
   return (
     <>
       <section className="page-header">
-        <h1>Amp List</h1>
+        <h1>Amps</h1>
       </section>
       <section className="amp-card-container">
         {amps.map((amp) => (
