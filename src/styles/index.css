@@ -42,7 +42,7 @@ body {
   --submit: rgb(26, 128, 0);
   --danger: rgb(0, 0, 0);
   --secondary: rgb(57, 57, 57);
-  --text-color: rgb(255, 255, 255);
+  --text-color: rgb(0, 0, 0);
   --button-bg: rgb(255, 255, 255);
   --nav-bg: rgba(111, 111, 111, 0.7);
   --nav-bg-ff: rgba(179, 179, 179, 0.9);
@@ -57,9 +57,7 @@ header {
   border-bottom: var(--borders);
 }
 
-nav {
-  margin: 10px;
-}
+
 
 ul {
   margin: 0;
@@ -86,30 +84,7 @@ nav a:hover {
   color: var(--link-hover-color)
 }
 
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
 
-nav li {
-  font-size: 16px;
-  font-weight: 600;
-  padding: 5px 8px;
-  text-decoration: none;
-  color: var(--text-color);
-}
-
-nav li:hover {
-  cursor: pointer;
-}
-
-.header-logo-container {
-  margin: auto;
-  max-width: 200px;
-  padding: 10px 20px 0;
-}
 
 .page-header {
   margin: 20px;
@@ -176,13 +151,13 @@ nav li:hover {
 }
 
 @media only screen and (min-width: 768px) {
-  header {
+  /* header {
     top: 0;
     display: flex;
     position: sticky;
     flex-direction: row;
     align-items: center;
-  }
+  } */
 
   main {
     max-width: 1920px;
@@ -228,59 +203,10 @@ nav li:hover {
     margin-left: 25px;
   }
 
-  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    header {
-      background: var(--nav-bg);
-      backdrop-filter: blur(3px);
-      -webkit-backdrop-filter: blur(3px);
-    }
-  }
 }
 
 @media only screen and (min-width: 1024px) {
-  main {
-    min-height: calc(100vh - 55px);
-  }
-  
-  header {
-    top: 20px;
-    max-width: 1920px;
-    border-bottom: none;
-    margin: 20px auto 0 auto;
-    width: calc(100vw - 40px);
-    background-color: transparent;
-  }
-
-  nav,
-  .header-logo-container {
-    margin: 0;
-    border-radius: 18px;
-    border: var(--borders);
-    background: var(--nav-bg-ff);
-  }
-
-  nav {
-    margin-left: auto;
-  }
-
-  .header-logo-container {
-    /* visual fix to help align logo */
-    width: 256px;
-    height: 35px;
-    padding-top: 6px;
-  }
-
-  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    header {
-      backdrop-filter: none;
-      -webkit-backdrop-filter: none;
+    main {
+      min-height: calc(100vh - 55px);
     }
-
-    nav,
-    .header-logo-container {
-      backdrop-filter: blur(3px);
-      -webkit-backdrop-filter: blur(3px);
-      background: rgba(104, 197, 248, .6);
-    }
-  }
-}
+  } 

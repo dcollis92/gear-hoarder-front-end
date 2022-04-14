@@ -16,7 +16,7 @@ const Nav = ({ user, handleLogout }) => {
           <li><NavLink to='/guitars/new'>Add a Guitar</NavLink></li>
           <li><NavLink to='/pedals/new'>Add a Pedal</NavLink></li>
           <li><NavLink to="/profiles">Profiles</NavLink></li>
-          <li><NavLink to="" onClick={handleLogout}>LOG OUT</NavLink></li>
+          <li><NavLink to="" onClick={handleLogout}>Log Out</NavLink></li>
         </>
       :
         <>
