@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
-import Header from './components/Header/Header'
+import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
@@ -227,7 +227,7 @@ const App = () => {
 
   return (
     <>
-      <Header user={user} handleLogout={handleLogout} />
+      <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
         <Route path="/" element={<Landing user={user} />} />
         <Route path="/signup" element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
