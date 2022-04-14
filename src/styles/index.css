@@ -30,7 +30,8 @@ body {
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
   min-height: 100vh;
-  background-color: rgb(223, 223, 223);
+  background-color: #293845;
+  color: #dfe6ed;
   --font-l: 1.8rem;
   --font-xl: 2.4rem;
   --font-reg: 1.6rem;
@@ -51,18 +52,14 @@ body {
   --borders: rgb(0, 0, 0) solid 2px;
 }
 
-header {
+/* header {
   width: 100%;
   background: var(--nav-bg-ff);
   border-bottom: var(--borders);
-}
+} */
 
-
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+img {
+  border-radius: 5px;
 }
 
 main {
@@ -77,7 +74,7 @@ nav a {
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
-  color: var(--text-color);
+  color: white;
 }
 
 nav a:hover {
@@ -104,7 +101,7 @@ nav a:hover {
   font-family: inherit;
   text-decoration: none;
   font-size: var(--font-l);
-  background-color: var(--button-bg);
+  background-color: #dfe6ed;
 }
 
 .btn:hover {
@@ -165,11 +162,6 @@ nav a:hover {
     margin: 0 auto;
   }
 
-  nav,
-  .header-logo-container {
-    margin: 10px 0;
-    padding: 0 15px;
-  }
 
   /* visual fix to help align logo */
   .header-logo-container {

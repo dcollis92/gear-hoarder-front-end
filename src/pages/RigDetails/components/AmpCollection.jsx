@@ -1,7 +1,4 @@
 // Image Assets
-// import AmpCombo from '../../assets/amp-combo.png'
-// import AmpCombo2 from '../../assets/amp-combo-2.png'
-// import AmpJCM from '../../assets/amp-jcmhead.png'
 
 // Components
 import AmpContainer from './AmpContainer'
@@ -11,9 +8,6 @@ const AmpCollection = ({ rig, amps, user, addAmpToCollection }) => {
     <section className="amps">
       <div className="subsection-title">
         <h2>Amps</h2>
-        {/* <img src={AmpCombo} alt="" />
-        <img src={AmpCombo2} alt="" />
-        <img src={AmpJCM} alt="" /> */}
       </div>
       <h3>{rig.name}'s Amps</h3>
       <div className="subsection-content">

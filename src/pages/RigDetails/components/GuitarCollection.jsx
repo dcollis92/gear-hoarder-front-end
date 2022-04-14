@@ -1,7 +1,4 @@
 // Image Assets
-// import GuitarExplorer from '../../assets/guitar-explorer.png'
-// import GuitarLesPaul from '../../assets/guitar-lespaul.png'
-// import GuitarSG from '../../assets/guitar-sg.png'
 
 // Components
 import GuitarContainer from './GuitarContainer'
@@ -11,9 +8,6 @@ const GuitarCollection = ({ rig, guitars, user, addGuitarToCollection }) => {
     <section className="guitars">
       <div className="subsection-title">
         <h2>Guitars</h2>
-        {/* <img src={GuitarExplorer} alt="" />
-        <img src={GuitarLesPaul} alt="" />
-        <img src={GuitarSG} alt="" /> */}
       </div>
       <h3>{rig.name}'s Guitars</h3>
       <div className="subsection-content">
