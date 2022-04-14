@@ -6,8 +6,9 @@ const AmpInput = ({ form, handleChange }) => {
         onChange={handleChange} 
         id="type" required 
         name="type">
-        <option selected value="Combo">Combo</option>
+        <option value="Select"></option>
         <option value="Head">Head</option>
+        <option value="Combo">Combo</option>
         <option value="Cabinet">Cabinet</option>
         <option value="Power Amp">Power Amp</option>
         <option value="Pre-Amp">Pre-Amp</option>
@@ -40,6 +41,18 @@ const AmpInput = ({ form, handleChange }) => {
         type="text" 
         placeholder="100" 
         autoComplete="off" />
+      <label htmlFor="powerType">Power Type</label>
+      <select value={form.powerType} 
+        onChange={handleChange}
+        id="powerType" required 
+        name="powerType">
+          <option value="Select"></option>
+        <option value="Tube">Tube</option>
+        <option value="Solid State">Solid State</option>
+        <option value="Hybrid">Hybrid</option>
+      </select> 
+      {form.type === "Combo" &&
+      <>
       <label htmlFor="speakerSize">Speaker Size</label>
       <input
         value={form.speakerSize ? form.speakerSize : ''} 
@@ -58,26 +71,20 @@ const AmpInput = ({ form, handleChange }) => {
         type="text" 
         placeholder="2" 
         autoComplete="off" />
-      <label htmlFor="powerType">Power Type</label>
-      <select value={form.powerType} 
-        onChange={handleChange}
-        id="powerType" required 
-        name="powerType">
-        <option selected value="Tube">Tube</option>
-        <option value="Solid State">Solid State</option>
-        <option value="Hybrid">Hybrid</option>
-      </select>     
       <label htmlFor="ohmRating">Ohm Rating</label>
       <select
         value={form.ohmRating} 
         onChange={handleChange} 
         id="ohmRating" required 
         name="ohmRating">
+        <option value="Select"></option>
         <option value="4">4</option> 
-        <option selected value="8">8</option> 
+        <option value="8">8</option> 
         <option value="16">16</option> 
         <option value="Multi">Multi</option> 
-      </select>           
+      </select>
+      </>
+      }          
       <label htmlFor="color">Color</label>
       <input
         value={form.color ? form.color : ''} 
