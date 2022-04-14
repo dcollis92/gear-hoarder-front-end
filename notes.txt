@@ -1,0 +1,4 @@
+have ternary in amps form to include cabinet with combo
+make sure ternary's display correctly on amp page
+have edit forms filled with previously entered information
+make edit forms work
