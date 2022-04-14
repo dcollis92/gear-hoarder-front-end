@@ -15,8 +15,8 @@ const AmpDetails = ({ user }) => {
 
   useEffect(() => {
     const fetchOne = async () => {
-      const ampData = await getOne(id)
-      setAmp(ampData)
+      const data = await getOne(id)
+      setAmp(data.amp)
     }
     fetchOne()
   }, [id])
@@ -29,7 +29,8 @@ const AmpDetails = ({ user }) => {
           <AmpCard amp={amp} />
         </div>
         <div className="amp-details">
-          <h1>{amp.name}</h1>
+          <h1>{amp.make} {amp.model}</h1>
+          <h2>{amp.model}</h2>
           <p>{amp.description}</p>
           <AmpActions amp={amp} user={user} />
         </div>
