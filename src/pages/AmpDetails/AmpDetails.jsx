@@ -30,7 +30,7 @@ const AmpDetails = ({ user, ampImages }) => {
         </div>
         <div className="amp-details">
           <h1>{amp.make} {amp.model}</h1>
-          <h2>{amp.model}</h2>
+          <h2>{amp.year}</h2>
           <p>{amp.description}</p>
           <AmpActions amp={amp} user={user} />
         </div>

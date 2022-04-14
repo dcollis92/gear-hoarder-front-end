@@ -9,14 +9,14 @@ import { getOne } from '../../services/guitars'
 import GuitarActions from './components/GuitarActions'
 import GuitarCard from '../../components/GuitarCard/GuitarCard'
 
-const GuitarDetails = ({ user }) => {
+const GuitarDetails = ({ user, guitarImages }) => {
   const { id } = useParams()
   const [guitar, setGuitar] = useState(null)
 
   useEffect(() => {
     const fetchOne = async () => {
-      const guitarData = await getOne(id)
-      setGuitar(guitarData)
+      const data = await getOne(id)
+      setGuitar(data.guitar)
     }
     fetchOne()
   }, [id])
@@ -26,10 +26,11 @@ const GuitarDetails = ({ user }) => {
     <>
       <section className="guitar-details-container">
         <div className="guitar-img">
-          <GuitarCard guitar={guitar} />
+          <GuitarCard guitar={guitar} guitarImages={guitarImages} />
         </div>
         <div className="guitar-details">
-          <h1>{guitar.name}</h1>
+        <h1>{guitar.make} {guitar.model}</h1>
+          <h2>{guitar.year}</h2>
           <p>{guitar.description}</p>
           <GuitarActions guitar={guitar} user={user} />
         </div>

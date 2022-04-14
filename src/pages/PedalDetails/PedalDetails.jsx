@@ -15,8 +15,8 @@ const PedalDetails = ({ user, pedalImages }) => {
 
   useEffect(() => {
     const fetchOne = async () => {
-      const pedalData = await getOne(id)
-      setPedal(pedalData)
+      const data = await getOne(id)
+      setPedal(data.pedal)
     }
     fetchOne()
   }, [id])
