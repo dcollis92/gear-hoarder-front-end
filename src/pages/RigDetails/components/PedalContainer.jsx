@@ -5,7 +5,7 @@ const PedalContainer = ({ pedal, addPedalToCollection }) => {
     <div key={pedal.id} className="pedal-container">
       <div className="color-block" style={{ backgroundColor: pedal.color }}></div>
       <Link to={`/pedals/${pedal.id}`}>
-        <p>{pedal.name}</p>
+        <p>{pedal.make} {pedal.model}</p>
       </Link>
       {addPedalToCollection &&
         <form id={pedal.id} onSubmit={addPedalToCollection}>

@@ -5,7 +5,7 @@ const GuitarContainer = ({ guitar, addGuitarToCollection }) => {
     <div key={guitar.id} className="guitar-container">
       <div className="color-block" style={{ backgroundColor: guitar.color }}></div>
       <Link to={`/guitars/${guitar.id}`}>
-        <p>{guitar.name}</p>
+        <p>{guitar.make} {guitar.model}</p>
       </Link>
       {addGuitarToCollection &&
         <form id={guitar.id} onSubmit={addGuitarToCollection}>
