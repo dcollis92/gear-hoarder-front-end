@@ -7,7 +7,7 @@ const GuitarConfirmation = (props) => {
   const { id } = useParams()
   const { state } = useLocation()
   const navigate = useNavigate()
-  const resource = props.deleteGuitar
+  const resource = 'guitars'
 
   const handleDelete = () => {
     props.deleteGuitar && props.deleteGuitar(id)    

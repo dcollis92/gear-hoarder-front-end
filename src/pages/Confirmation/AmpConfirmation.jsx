@@ -7,7 +7,7 @@ const AmpConfirmation = (props) => {
   const { id } = useParams()
   const { state } = useLocation()
   const navigate = useNavigate()
-  const resource = props.deleteAmp
+  const resource = 'amps'
 
   const handleDelete = () => {
     props.deleteAmp && props.deleteAmp(id)    

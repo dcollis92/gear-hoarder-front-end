@@ -7,7 +7,7 @@ const RigConfirmation = (props) => {
   const { id } = useParams()
   const { state } = useLocation()
   const navigate = useNavigate()
-  const resource = props.deleteRig
+  const resource = 'rigs'
 
   const handleDelete = () => {
     props.deleteRig && props.deleteRig(id)    
