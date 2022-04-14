@@ -4,14 +4,14 @@ Gear Hoarder is a React Built Web App utilizing a Flask API backend. Gear Hoarde
 
 ---
 
-## Use the App Below
+## :arrow_down: Use the App Below :arrow_down: 
 #### ➡ [Gear Hoarder Front End](https://gear-hoarder.netlify.app/)
 #### ➡ [Gear Hoarder Back End](https://gear-hoarder-api.herokuapp.com/)
 
 ---
 
 ## Flask API
-[Gear Hoarder Flask API](https://github.com/timcrisp94/gear-hoarder-back-end)
+[Gear Hoarder Flask API](https://github.com/dcollis92/gear-hoarder-back-end)
 
 ---
 
@@ -21,7 +21,11 @@ Gear Hoarder is a React Built Web App utilizing a Flask API backend. Gear Hoarde
 
 ---
 
-## ⚙ Technologies Used 
+[Initial wireframe](https://imgur.com/a/Ifr1BJ1)
+
+---
+
+## ⚙ Technologies Used :computer:
 
   ![React](https://img.shields.io/badge/-React-white?style=for-the-badge&logo=React&logoColor=blue)
   ![JavaScript](https://img.shields.io/badge/-JavaScript-white?style=for-the-badge&logo=javascript&logoColor=black)
@@ -61,3 +65,9 @@ Gear Hoarder is a React Built Web App utilizing a Flask API backend. Gear Hoarde
 
 ---
 
+## ⚙ Ice Box :icecream:
+
+- [ ] Create pages for microphones and other instruments
+- [ ] Users can upload photos of their gear
+- [ ] Light/Dark Mode
+- [ ] Further develop Safari + mobile functionality
