@@ -30,7 +30,17 @@ const AmpDetails = ({ user, ampImages }) => {
         </div>
         <div className="amp-details">
           <h1>{amp.make} {amp.model}</h1>
-          <h2>{amp.year}</h2>
+          <h2>This {amp.year}</h2>
+          <p>{amp.speaker_amount}</p>
+          <p>{amp.speaker_size}</p>
+          {amp.ohm_rating
+          ? <p>Ohms: {amp.ohm_rating}</p>
+          : <p>Ohms: Unknown</p>
+          }
+          <p>{amp.type}</p>
+          <p>{amp.wattage}</p>
+          <p>{amp.description}</p>
+          <p>{amp.description}</p>
           <p>{amp.description}</p>
           <AmpActions amp={amp} user={user} />
         </div>
