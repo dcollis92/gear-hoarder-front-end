@@ -8,7 +8,7 @@ import './RigList.css'
 // Components
 import RigCard from '../../components/RigCard/RigCard'
 
-const RigList = ({rigs, gearImages}) => {
+const RigList = ({rigs, rigImages}) => {
   return (
     <>
       <section className="page-header">
@@ -23,7 +23,7 @@ const RigList = ({rigs, gearImages}) => {
           key={rig.id} 
           rig={rig} 
           // isCard={true}
-          gearImages={gearImages} 
+          rigImages={rigImages} 
           />
         ))}
       </section>
