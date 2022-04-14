@@ -84,7 +84,8 @@ const AmpInput = ({ form, handleChange }) => {
         onChange={handleChange} 
         id="color"
         required name="color" 
-        type="color"  
+        type="text"
+        color="Black"  
         autoComplete="off" />
       <label htmlFor="year">Year</label>
       <input
