@@ -1,4 +1,5 @@
 // import { NavLink } from 'react-router-dom'
+import './NavBar.scss';
 import { Nav, Navbar, Container }  from 'react-bootstrap';
 
 const NavBar = ({ user, handleLogout }) => {
