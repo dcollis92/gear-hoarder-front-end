@@ -66,8 +66,7 @@ const AmpForm = (props) => {
         isWorking: ampData.is_working,
         onLoan: ampData.on_loan
       })
-    }
-    console.log(id)
+    }    
     id ? fetchOne() : setForm({ isWorking: false, onLoan: false })
     return () => setForm({})
   }, [id])

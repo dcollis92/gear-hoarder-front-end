@@ -44,7 +44,8 @@ const GuitarForm = (props) => {
 
   useEffect(() => {
     const fetchOne = async () => {
-      const guitarData = await getOne(id)
+      const data = await getOne(id)
+      const guitarData = data.guitar
       setForm({
         id: guitarData.id,
         type: guitarData.type,
