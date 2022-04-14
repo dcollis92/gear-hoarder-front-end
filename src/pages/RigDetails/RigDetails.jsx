@@ -11,13 +11,13 @@ import GuitarCollection from './components/GuitarCollection'
 import AmpCollection from './components/AmpCollection'
 import PedalCollection from './components/PedalCollection'
 
-const RigDetails = ({ gearImages, user }) => {
+const RigDetails = ({ rigImages, user }) => {
   const { id } = useParams()
   const [rig, setRig] = useState(null)
   const [availableGuitars, setAvailableGuitars] = useState([])
   const [availableAmps, setAvailableAmps] = useState([])
   const [availablePedals, setAvailablePedals] = useState([])
-  const idx = Math.floor(Math.random() * (gearImages.length))
+  const idx = Math.floor(Math.random() * (rigImages.length))
 
   const addGuitarToCollection = async (e) => {
     e.preventDefault()
@@ -60,7 +60,7 @@ const RigDetails = ({ gearImages, user }) => {
     <>
       <section className="rig-container">
         <div className="rig-img">
-          <img className="usr-img" src={gearImages[idx]} alt={`${rig.name}`} />
+          <img className="usr-img" src={rigImages[idx]} alt={`${rig.name}`} />
         </div>
         <div className="rig-details">
           <h1>{rig.name}</h1>
