@@ -29,7 +29,17 @@ const PedalDetails = ({ user, pedalImages }) => {
           <PedalCard pedal={pedal} pedalImages={pedalImages} />
         </div>
         <div className="pedal-details">
-          <h1>{pedal.name}</h1>
+        <h1>{pedal.make} {pedal.model}</h1>
+          <h2>Model Year: {pedal.year}</h2>
+          <p>Finish: {pedal.color}</p>
+          {pedal.on_loan === false 
+          ? <p>This pedal is not on loan</p>
+          : <p>This pedal is currently on loan</p>
+          }
+          {pedal.is_working === true 
+          ? <p>This pedal is currently working</p>
+          : <p>This pedal is currently BUSTED</p>
+          }
           <p>{pedal.description}</p>
           <PedalActions pedal={pedal} user={user} />
         </div>
