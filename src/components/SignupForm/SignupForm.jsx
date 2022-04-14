@@ -1,7 +1,9 @@
+import './SignupForm.scss'
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import styles from './SignupForm.module.css'
+import { useNavigate } from 'react-router-dom'
+import { Form, Button } from 'react-bootstrap'
 import * as authService from '../../services/authService'
+
 
 const SignupForm = props => {
   const navigate = useNavigate()
@@ -38,66 +40,82 @@ const SignupForm = props => {
   }
 
   return (
-    <form
-      autoComplete="off"
-      onSubmit={handleSubmit}
-      className={styles.container}
-    >
-      <div className={styles.inputContainer}>
-        <label htmlFor="name" className={styles.label}>Name</label>
-        <input
-          type="text"
+    <main className='signup-form'>
+      <div className='div'>
+        <Form 
           autoComplete="off"
-          id="name"
-          value={name}
-          name="name"
-          onChange={handleChange}
-        />
+          onSubmit={handleSubmit}
+          className='container'>
+            <Form.Group className="mb-3">
+            <Form.Label 
+              htmlFor="name" 
+              className='label'>
+              Username</Form.Label>
+            <Form.Control 
+              type="text" 
+              autoComplete="off"
+              id="name"
+              value={name}
+              name="name"
+              onChange={handleChange}
+              placeholder="Enter Username" />
+            </Form.Group>
+            <Form.Group className="mb-3">
+            <Form.Label 
+              htmlFor="email" 
+              className='label'>
+              Email Address</Form.Label>
+            <Form.Control 
+              type="email" 
+              autoComplete="off"
+              id="email"
+              value={email}
+              name="email"
+              onChange={handleChange}
+              placeholder="Enter Email" />
+            <Form.Text className="text-muted">
+              We'll never share your email with anyone else.
+            </Form.Text>
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label 
+                htmlFor="password"
+                className='label'>
+                Password</Form.Label>
+              <Form.Control 
+                type="password" 
+                autoComplete="off"
+                id="password"
+                value={password}
+                name="password"
+                onChange={handleChange}
+                placeholder="Enter Password" />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label 
+                htmlFor="confirm"
+                className='label'>
+                Password</Form.Label>
+              <Form.Control 
+                type="password" 
+                autoComplete="off"
+                id="confirm"
+                value={passwordConf}
+                name="passwordConf"
+                onChange={handleChange}
+                placeholder="Re-Enter Password" />
+            </Form.Group>
+            <Button 
+              disabled={isFormInvalid()} 
+              className='button'
+              variant="light" 
+              type="submit">
+              Sign Up</Button>
+            <Button className='button'
+              href="/">Cancel</Button>
+        </Form>
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="email" className={styles.label}>Email</label>
-        <input
-          type="text"
-          autoComplete="off"
-          id="email"
-          value={email}
-          name="email"
-          onChange={handleChange}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Password</label>
-        <input
-          type="password"
-          autoComplete="off"
-          id="password"
-          value={password}
-          name="password"
-          onChange={handleChange}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="confirm" className={styles.label}>
-          Confirm Password
-        </label>
-        <input
-          type="password"
-          autoComplete="off"
-          id="confirm"
-          value={passwordConf}
-          name="passwordConf"
-          onChange={handleChange}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <button disabled={isFormInvalid()} className={styles.button}>
-          Sign Up
-        </button>
-        <Link to="/">
-          <button>Cancel</button>
-        </Link>
-      </div>
-    </form>
+    </main> 
   )
 }
 

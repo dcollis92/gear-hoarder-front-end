@@ -32,12 +32,6 @@ body {
   min-height: 100vh;
   background-color:#0d1117;
   color: #dfe6ed;
-  --font-l: 1.8rem;
-  --font-xl: 2.4rem;
-  --font-reg: 1.6rem;
-  --font-med: 1.7rem;
-  --font-xxl: 3.6rem;
-  --font-xtreme: 4.2rem;
   --card-border-radius: 6px;
   --warn: rgb(0, 0, 0);
   --submit: rgb(26, 128, 0);
@@ -66,19 +60,12 @@ main {
   width: 100vw;
 }
 
-h2 {
-  font-size: var(--font-xl);
-}
 
 nav a {
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
   color: white;
-}
-
-nav a:hover {
-  color: var(--link-hover-color)
 }
 
 
@@ -100,7 +87,6 @@ nav a:hover {
   border-style: solid;
   font-family: inherit;
   text-decoration: none;
-  font-size: var(--font-l);
   background-color: #dfe6ed;
 }
 
@@ -129,7 +115,6 @@ nav a:hover {
 }
 
 .page-header h1 {
-  font-size: var(--font-xxl);
   margin: 0;
 }
 
@@ -182,9 +167,6 @@ nav a:hover {
     width: 213px;
   }
 
-  .page-header h1 {
-    font-size: var(--font-xtreme);
-  }
   
   .page-header img {
     height: 50px;
