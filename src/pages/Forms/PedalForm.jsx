@@ -14,7 +14,7 @@ import PedalInput from './PedalInput'
 const PedalForm = (props) => {
   const { id } = useParams()
   const navigate = useNavigate()
-  const [form, setForm] = useState({ color: '#ff0000', isWorking: "false", onLoan: "false" })
+  const [form, setForm] = useState({ isWorking: "false", onLoan: "false" })
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -56,7 +56,7 @@ const PedalForm = (props) => {
         on_loan: pedalData.on_loan,
       })
     }
-    id ? fetchOne() : setForm({ color: '#ff0000', isWorking: false, onLoan: false })
+    id ? fetchOne() : setForm({ isWorking: false, onLoan: false })
     return () => setForm({})
   }, [id])
 
