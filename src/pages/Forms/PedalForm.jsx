@@ -1,7 +1,7 @@
 // stylesheet
 import '../../styles/Form.css'
 import { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 // Services
 import { getOne } from '../../services/pedals'
@@ -13,7 +13,6 @@ import PedalInput from './PedalInput'
 
 const PedalForm = (props) => {
   const { id } = useParams()
-  const navigate = useNavigate()
   const [form, setForm] = useState({ isWorking: "false", onLoan: "false" })
 
   const handleSubmit = async (e) => {
@@ -30,7 +29,6 @@ const PedalForm = (props) => {
         on_loan: form.onLoan === "true" ? true : false,
     }
     id ? props.updatePedal(formData) : props.addPedal(formData)
-    navigate('/pedals')
   }
 
   const handleChange = (e) => {

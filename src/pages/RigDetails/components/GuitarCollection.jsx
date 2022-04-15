@@ -1,6 +1,3 @@
-// Image Assets
-
-// Components
 import GuitarContainer from './GuitarContainer'
 
 const GuitarCollection = ({ rig, guitars, user, addGuitarToCollection }) => {

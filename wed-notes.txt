@@ -1,0 +1,19 @@
+Situate ourselves
+
+FONTS LOOKIN' FUNKY 
+
+Login and Logout Forms coordinated to Bootstrap Forms
+-Gear forms need massage
+
+FOnt and layout of Rig Details Page need inspection
+
+Logo
+-Finish functionality first
+--TA hours for this
+
+USER should not be able to submit amp form without defaults in enum
+
+TERNARY DISPLAY for AMP DISPLAY
+
+CREATE lands on Details Page
+

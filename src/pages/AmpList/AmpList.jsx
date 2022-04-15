@@ -1,8 +1,4 @@
 import './AmpList.css'
-
-// Image Assets
-
-// Components
 import AmpCard from '../../components/AmpCard/AmpCard'
 
 const AmpList = ({amps, ampImages}) => {

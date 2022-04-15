@@ -150,21 +150,29 @@ const App = () => {
   const addRig = async (rigData) => {
     const rig = await rigService.create(rigData)
     setRigs([...rigs, rig])
+    const newId = rig.id
+    navigate(`/rigs/${newId}`)
   }
 
   const addAmp = async (ampData) => {
     const amp = await ampService.create(ampData)
     setAmps([...amps, amp])
+    const newId = amp.id
+    navigate(`/amps/${newId}`)
   }
 
   const addGuitar = async (guitarData) => {
     const guitar = await guitarService.create(guitarData)
     setGuitars([...guitars, guitar])
+    const newId = guitar.id
+    navigate(`/guitars/${newId}`)
   }
 
   const addPedal = async (pedalData) => {
     const pedal = await pedalService.create(pedalData)
     setPedals([...pedals, pedal])
+    const newId = pedal.id
+    navigate(`/pedals/${newId}`)
   }
 
   const updateRig = async (rigData) => {
@@ -172,6 +180,8 @@ const App = () => {
     setRigs(rigs.map((rig) => (
       rig.id === updatedRig.id ? updatedRig : rig
     )))
+    const newId = updatedRig.id
+    navigate(`/rigs/${newId}`)
   }
 
   const updateAmp = async (ampData) => {
@@ -179,6 +189,8 @@ const App = () => {
     setAmps(amps.map((amp) => (
       amp.id === updatedAmp.id ? updatedAmp : amp
     )))
+    const newId = updatedAmp.id
+    navigate(`/amps/${newId}`)
   }
 
   const updateGuitar = async (guitarData) => {
@@ -186,6 +198,8 @@ const App = () => {
     setGuitars(guitars.map((guitar) => (
       guitar.id === updatedGuitar.id ? updatedGuitar : guitar
     )))
+    const newId = updatedGuitar.id
+    navigate(`/guitars/${newId}`)
   }
 
   const updatePedal = async (pedalData) => {
@@ -193,6 +207,8 @@ const App = () => {
     setPedals(pedals.map((pedal) => (
       pedal.id === updatedPedal.id ? updatedPedal : pedal
     )))
+    const newId = updatedPedal.id
+    navigate(`/pedals/${newId}`)
   }
 
   const deleteRig = async (id) => {

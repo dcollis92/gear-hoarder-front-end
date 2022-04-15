@@ -1,6 +1,3 @@
-// Image Assets
-
-// Components
 import AmpContainer from './AmpContainer'
 
 const AmpCollection = ({ rig, amps, user, addAmpToCollection }) => {

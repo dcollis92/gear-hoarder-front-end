@@ -1,8 +1,4 @@
 import './RigList.css'
-
-// Image Assets
-
-// Components
 import RigCard from '../../components/RigCard/RigCard'
 
 const RigList = ({rigs, rigImages}) => {

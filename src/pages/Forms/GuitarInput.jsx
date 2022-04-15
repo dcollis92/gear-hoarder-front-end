@@ -6,7 +6,6 @@ const GuitarInput = ({ form, handleChange }) => {
         onChange={handleChange} 
         id="type" required 
         name="type">
-        <option value="Select"></option>
         <option value="Electric">Electric</option>
         <option value="Acoustic">Acoustic</option>
         <option value="Bass">Bass</option>
