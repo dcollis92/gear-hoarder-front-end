@@ -33,22 +33,22 @@ Wireframe
   ![React](https://img.shields.io/badge/-React-white?style=for-the-badge&logo=React&logoColor=blue)
   ![JavaScript](https://img.shields.io/badge/-JavaScript-white?style=for-the-badge&logo=javascript&logoColor=black)
   ![Bootstrap](https://img.shields.io/badge/-Bootstrap-white?style=for-the-badge&logo=bootstrap)
-  ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-  ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
-  ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) 
-
+  ![Python](https://img.shields.io/badge/-Python-white?style=for-the-badge&logo=python)
+  
+  ![Flask](https://img.shields.io/badge/-Flask-white?style=for-the-badge&logo=Flask&logoColor=black)
+  ![PostgresSQL](https://img.shields.io/badge/-PostgreSQL-white?style=for-the-badge&logo=postgresql)
   ![Postman](https://img.shields.io/badge/Postman-white?style=for-the-badge&logo=postman)
   ![ReactRouter](https://img.shields.io/badge/-React_Router-white?style=for-the-badge&for-the-badge&logo=react-router)
-  ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
-
-  ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
+  
+  ![JWT](https://img.shields.io/badge/JWT-white?style=for-the-badge&logo=JSON%20web%20tokens)
+  ![Netlify](https://img.shields.io/badge/netlify-white?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
   ![Heroku](https://img.shields.io/badge/-Heroku-white?style=for-the-badge&logo=heroku&logoColor=black)
   ![GitHub](https://img.shields.io/badge/-GitHub-white?style=for-the-badge&logo=github&logoColor=black)  
-  ![Git](https://img.shields.io/badge/-Git-white?style=for-the-badge&logo=git)
   
+  ![Git](https://img.shields.io/badge/-Git-white?style=for-the-badge&logo=git)
   ![Sass](https://img.shields.io/badge/-Sass-white?style=for-the-badge&logo=Sass)
   ![HTML5](https://img.shields.io/badge/-HTML5-white?style=for-the-badge&logo=html5)
-  ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)  
+  ![CSS3](https://img.shields.io/badge/-CSS3-white?style=for-the-badge&logo=css3&logoColor=1572B6)
   
 ---
 
