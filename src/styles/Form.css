@@ -33,11 +33,6 @@
   border-radius: var(--card-border-radius);
 }
 
-.form-container input {
-  width: 100%;
-  margin: 8px 0px 10px 0px;
-}
-
 .form-container .btn {
   width: 100%;
   margin-right: 0;
