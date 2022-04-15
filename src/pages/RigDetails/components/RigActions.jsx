@@ -11,7 +11,9 @@ const RigActions = ({ rig, user }) => {
       <button className="btn danger" onClick={() => navigate(`/rigs`)}>Return</button>
     </div>
     :
-    <button className="btn danger" onClick={() => navigate(`/rigs`)}>Return</button>
+    <div className="actions">
+      <button className="btn danger" onClick={() => navigate(`/rigs`)}>Return</button>
+    </div>
   )
 }
 
