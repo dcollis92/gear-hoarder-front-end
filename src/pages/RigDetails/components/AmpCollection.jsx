@@ -10,7 +10,7 @@ const AmpCollection = ({ rig, amps, user, addAmpToCollection }) => {
       <div className="subsection-content">
         {rig.amps.length
           ? rig.amps.map((amp) => <AmpContainer key={amp.id} amp={amp} />)
-          : <p className="no-amps">{rig.name} doesn't have any amps 😞</p>
+          : <p className="no-amps">{rig.name} doesn't have any amps</p>
         }
       </div>
       {user.id === rig.profile_id &&

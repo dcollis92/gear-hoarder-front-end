@@ -10,7 +10,7 @@ const PedalCollection = ({ rig, pedals, user, addPedalToCollection }) => {
       <div className="subsection-content">
         {rig.pedals.length
           ? rig.pedals.map((pedal) => <PedalContainer key={pedal.id} pedal={pedal} />)
-          : <p className="no-pedals">{rig.name} doesn't have any pedals 😞</p>
+          : <p className="no-pedals">{rig.name} doesn't have any pedals</p>
         }
       </div>
       {user.id === rig.profile_id &&
