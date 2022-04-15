@@ -17,3 +17,15 @@ TERNARY DISPLAY for AMP DISPLAY
 
 CREATE lands on Details Page
 
+FONT SIZE AND TEXT COLOR ADJUSTMENT NAV
+a.nav-link
+
+sign up form adjust font size and width
+
+Rigs
+Center Top Text and Cards
+
+Gear for each
+Center top text and Card Margins
+
+Details cards are getting smooshed
