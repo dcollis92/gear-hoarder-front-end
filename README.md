@@ -76,6 +76,6 @@ Wireframe
 - [ ] Implement ability to remove guitars, amps and pedals from a rig
 - [ ] Create pages for microphones, drums, accesories and other instruments that also demonstrate full CRUD
 - [ ] Users can upload photos of their gear
-- [ ] Light/Dark Mode
+- [ ] Light/Dark Mode 
 - [ ] Further develop Safari + mobile functionality
 - [ ] Any String that is not a color sows up as random color, or we make default gradiesnt for sunburts and custom finishes
