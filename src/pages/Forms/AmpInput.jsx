@@ -75,7 +75,7 @@ const AmpInput = ({ form, handleChange }) => {
       <select
         value={form.ohmRating} 
         onChange={handleChange} 
-        id="ohmRating" required 
+        id="ohmRating" required
         name="ohmRating">
         <option value="Select"></option>
         <option value="4">4</option> 
