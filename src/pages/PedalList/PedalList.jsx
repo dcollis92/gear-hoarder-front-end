@@ -1,8 +1,4 @@
 import './PedalList.css'
-
-// Image Assets
-
-// Components
 import PedalCard from '../../components/PedalCard/PedalCard'
 
 const PedalList = ({pedals, pedalImages}) => {
