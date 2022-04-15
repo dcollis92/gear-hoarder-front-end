@@ -31,7 +31,7 @@ const AmpDetails = ({ user, ampImages }) => {
         <div className="amp-details">
           <h1>{amp.make} {amp.model}</h1>
           {amp.type !== "Cabinet"
-          ? <p>{amp.power_type} {amp.type}</p>
+          ? <p>Power: {amp.power_type}</p>
           : <p></p>
           }
           <p>Model Year: {amp.year}</p>
