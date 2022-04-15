@@ -32,7 +32,7 @@ const AmpDetails = ({ user, ampImages }) => {
           <h1>{amp.make} {amp.model}</h1>
           {amp.type !== "Cabinet"
           ? <p>Power: {amp.power_type}</p>
-          : <p></p>
+          : <p></p
           }
           <p>Model Year: {amp.year}</p>
           <p>Color: {amp.color}</p>
@@ -49,14 +49,14 @@ const AmpDetails = ({ user, ampImages }) => {
           </>
           }
           {amp.on_loan === false 
-          ? <p></p>
-          : <p>This amp is currently on loan</p>
+          ? <p>On Loan: No</p>
+          : <p>On Loan: Yes</p>
           }
           {amp.is_working === true 
-          ? <p></p>
-          : <p>This amp is currently BUSTED</p>
+          ? <p>Working: Yes</p>
+          : <p>Working: No</p>
           }
-          <p>{amp.description}</p>
+          <p>Description: {amp.description}</p>
           <AmpActions amp={amp} user={user} />
         </div>
       </section>

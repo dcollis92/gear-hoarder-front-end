@@ -35,33 +35,21 @@ const LoginForm = props => {
           onSubmit={handleSubmit}
           className='container'>
             <Form.Group className="mb-3">
-            <Form.Label 
-              htmlFor="email" 
-              className='label'>
-              Email Address
-            </Form.Label>
-            <Form.Control 
-              type="email" 
-              autoComplete="off"
-              id="email"
-              value={formData.email}
-              name="email"
-              onChange={handleChange}
-              placeholder="Enter Email" />
+              <Form.Label htmlFor="email" 
+                className='label'>Email Address
+              </Form.Label>
+              <Form.Control type="email" autoComplete="off"
+                id="email" value={formData.email}
+                name="email" onChange={handleChange}
+                placeholder="Enter Email" />
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label 
-                htmlFor="password"
-                className='label'>
-                Password
+              <Form.Label htmlFor="password"
+                className='label'>Password
               </Form.Label>
-              <Form.Control 
-                type="password" 
-                autoComplete="off"
-                id="password"
-                value={formData.pw}
-                name="password"
-                onChange={handleChange}
+              <Form.Control type="password" autoComplete="off"
+                id="password" value={formData.password}
+                name="password" onChange={handleChange}
                 placeholder="Enter Password" />
             </Form.Group>
             <Button 
