@@ -2,9 +2,6 @@ Situate ourselves
 
 FONTS LOOKIN' FUNKY 
 
-Login and Logout Forms coordinated to Bootstrap Forms
--Gear forms need massage
-
 FOnt and layout of Rig Details Page need inspection
 
 Logo
@@ -17,8 +14,6 @@ TERNARY DISPLAY for AMP DISPLAY
 
 CREATE lands on Details Page
 
-FONT SIZE AND TEXT COLOR ADJUSTMENT NAV
-a.nav-link
 
 sign up form adjust font size and width
 
@@ -29,3 +24,11 @@ Gear for each
 Center top text and Card Margins
 
 Details cards are getting smooshed
+
+FOR FRIDAY MORNING
+- README needs finalization
+- attributes needs linking
+- Center Forms
+
+- Rig Details
+-- Center Image and Text
