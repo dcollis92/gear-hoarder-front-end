@@ -1,6 +1,6 @@
 import '../../styles/Form.css'
 import { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 // Services
 import { getOne } from '../../services/amps'
@@ -12,7 +12,6 @@ import AmpInput from './AmpInput'
 
 const AmpForm = (props) => {
   const { id } = useParams()
-  const navigate = useNavigate()
   const [form, setForm] = useState({ isWorking: "false", onLoan: "false", type: "Combo", powerType: "Tube", ohmRating: "4" })
 
   const handleSubmit = async (e) => {
@@ -35,8 +34,6 @@ const AmpForm = (props) => {
 
     }
     id ? props.updateAmp(formData) : props.addAmp(formData)
-    navigate(`/amps`)
-    
   }
 
   const handleChange = (e) => {
