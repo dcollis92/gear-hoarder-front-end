@@ -22,6 +22,8 @@
 ### ➡ [Trello Board](https://trello.com/b/iHrAuCXM/unit-4-proposal)
 
 ---
+Home
+![Mobile view](https://i.imgur.com/uWhhF96.png)
 
 Wireframe
 ![Wire Frame](https://i.imgur.com/wSNWtjO.png)
