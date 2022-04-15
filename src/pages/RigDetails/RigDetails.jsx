@@ -67,8 +67,7 @@ const RigDetails = ({ rigImages, user }) => {
           <p>{rig.description}</p>
           <RigActions rig={rig} user={user} />
         </div>
-      </section> 
-      {/* - display rig -  */}
+      </section>       
       <div className="gear-container">
         <div className="">
           <GuitarCollection
@@ -78,7 +77,7 @@ const RigDetails = ({ rigImages, user }) => {
             addGuitarToCollection={addGuitarToCollection}
           /> 
         </div>
-        <div className="">
+        <div className="amp-collection">
           <AmpCollection
             rig={rig}
             user={user}
@@ -86,7 +85,7 @@ const RigDetails = ({ rigImages, user }) => {
             addAmpToCollection={addAmpToCollection}
           /> 
         </div>
-        <div className="">
+        <div className="pedal-collection">
           <PedalCollection
             rig={rig}
             user={user}

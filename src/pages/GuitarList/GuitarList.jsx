@@ -1,8 +1,4 @@
 import './GuitarList.css'
-
-// Image Assets
-
-// Components
 import GuitarCard from '../../components/GuitarCard/GuitarCard'
 
 const GuitarList = ({guitars, guitarImages}) => {

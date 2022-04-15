@@ -44,7 +44,7 @@ const GuitarForm = (props) => {
 
   useEffect(() => {
     const fetchOne = async () => {
-      const data = await getOne(id)
+      const data = await getOne(id)      
       const guitarData = data.guitar
       setForm({
         id: guitarData.id,
@@ -58,6 +58,7 @@ const GuitarForm = (props) => {
         onLoan: guitarData.on_loan ? true : false,
       })
     }
+    
     id ? fetchOne() : setForm({ isWorking: false, onLoan: false })
     return () => setForm({})
   }, [id])
@@ -68,8 +69,7 @@ const GuitarForm = (props) => {
       {id
           ? <h1>Edit Guitar</h1>
           : <>
-            <h1>Add Guitar</h1>
-            {/* <img src= {} alt="" /> */}
+            <h1>Add Guitar</h1>            
             </>
         }
       </div>
