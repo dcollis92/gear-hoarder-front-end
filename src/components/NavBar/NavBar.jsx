@@ -1,22 +1,34 @@
 // import { NavLink } from 'react-router-dom'
 import './NavBar.scss';
-import { Nav, Navbar, Container }  from 'react-bootstrap';
+import { Nav, Navbar, Container, Offcanvas }  from 'react-bootstrap';
+import Logo from "../../assets/logos/Gear-Hoarder.svg"
+
 
 const NavBar = ({ user, handleLogout }) => {
   return (
     <>
     {user ?
-      <Navbar sticky="top" className='navbar' collapseOnSelect expand="xl" >
-      <Container>
+      <Navbar bg="lavender" expand={false}>
+      <Container fluid>
       <Navbar.Brand href="/">
-        <img alt="" src="./assets/logo.png"
-        width="70%"
+        <img alt="" src={Logo}
+        height="70px"
         className="d-inline-block align-top"/>
         {' '}</Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="me-auto">
-          <Nav.Link href="/rigs">
+        <Navbar.Toggle aria-controls="offcanvasNavbar" />
+        <Navbar.Offcanvas bg='lavender' className='mx-auto'
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+          placement="end"
+        >
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title id="offcanvasNavbarLabel"><img alt="" src={Logo}
+            height='100px'
+            className="mx-auto"/></Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Nav className="justify-content-end flex-grow-1 pe-2">
+              <Nav.Link href="/rigs">
             <i class="fas fa-circle-right"></i>
             {' '}All Rigs</Nav.Link>
           <Nav.Link href="/amps">
@@ -44,7 +56,8 @@ const NavBar = ({ user, handleLogout }) => {
             <i className="fas fa-right-from-bracket"></i>
             {' '}Log Out</Nav.Link>
         </Nav>
-      </Navbar.Collapse>
+        </Offcanvas.Body>
+    </Navbar.Offcanvas>
       </Container>
     </Navbar>
     :

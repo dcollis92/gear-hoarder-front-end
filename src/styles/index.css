@@ -31,6 +31,12 @@ body {
   sans-serif;
   letter-spacing: 0.07em;
   min-height: 100vh;
+  --font-l: 1.8rem;
+  --font-xl: 2.4rem;
+  --font-reg: 1.6rem;
+  --font-med: 1.7rem;
+  --font-xxl: 3.6rem;
+  --font-xtreme: 4.2rem;
   background-color:#0d1117;
   color: #dfe6ed;
   --card-border-radius: 6px;
@@ -47,11 +53,6 @@ body {
   --borders: #dfe6ed solid 2px;
 }
 
-/* header {
-  width: 100%;
-  background: var(--nav-bg-ff);
-  border-bottom: var(--borders);
-} */
 
 h2 {
   font-size: 1.5%;
@@ -62,19 +63,21 @@ img {
   border-radius: 5px;
 }
 
+.nav a {
+  font-size: 16px;
+}
+
 main {
   width: 100vw;
 }
 
 
-nav a {
-  font-size: 16px;
+.nav a {
+  font-size: var(--font-xl);
   font-weight: 600;
   text-decoration: none;
   color: white;
 }
-
-
 
 .page-header {
   margin: 20px;
