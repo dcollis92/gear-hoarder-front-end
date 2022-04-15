@@ -10,7 +10,7 @@ const GuitarCollection = ({ rig, guitars, user, addGuitarToCollection }) => {
       <div className="subsection-content">
         {rig.guitars.length
           ? rig.guitars.map((guitar) => <GuitarContainer key={guitar.id} guitar={guitar} />)
-          : <p className="no-guitars">{rig.name} doesn't have any guitars 😞</p>
+          : <p className="no-guitars">{rig.name} doesn't have any guitars</p>
         }
       </div>
       {user.id === rig.profile_id &&

@@ -8,8 +8,6 @@ import { getOne } from '../../services/amps'
 // Components
 import AmpInput from './AmpInput'
 
-// Image Assets
-
 const AmpForm = (props) => {
   const { id } = useParams()
   const [form, setForm] = useState({ isWorking: "false", onLoan: "false", type: "Combo", powerType: "Tube", ohmRating: "4" })
