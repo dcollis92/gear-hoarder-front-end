@@ -13,7 +13,7 @@ import AmpInput from './AmpInput'
 const AmpForm = (props) => {
   const { id } = useParams()
   const navigate = useNavigate()
-  const [form, setForm] = useState({ isWorking: "false", onLoan: "false" })
+  const [form, setForm] = useState({ isWorking: "false", onLoan: "false", type: "Combo", powerType: "Tube", ohmRating: "4" })
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -36,6 +36,7 @@ const AmpForm = (props) => {
     }
     id ? props.updateAmp(formData) : props.addAmp(formData)
     navigate(`/amps`)
+    
   }
 
   const handleChange = (e) => {
@@ -67,7 +68,7 @@ const AmpForm = (props) => {
         onLoan: ampData.on_loan
       })
     }    
-    id ? fetchOne() : setForm({ isWorking: false, onLoan: false })
+    id ? fetchOne() : setForm({ isWorking: "false", onLoan: "false", type: "Combo", powerType: "Tube", ohmRating: "4" })
     return () => setForm({})
   }, [id])
 
