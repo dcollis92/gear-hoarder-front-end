@@ -71,7 +71,7 @@ const GuitarForm = (props) => {
         }
       </div>
       
-      <section className="form-container">
+      <section className="form-container mx-auto">
         <form onSubmit={handleSubmit}>
           <GuitarInput form={form} handleChange={handleChange} />
           <button 

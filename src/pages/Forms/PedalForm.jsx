@@ -71,7 +71,7 @@ const PedalForm = (props) => {
         }
       </div>
       
-      <section className="form-container">
+      <section className="form-container mx-auto">
         <form onSubmit={handleSubmit}>
           <PedalInput form={form} handleChange={handleChange} />
           <button type="submit" className="btn submit">Submit</button>
