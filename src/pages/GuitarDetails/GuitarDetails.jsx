@@ -33,11 +33,11 @@ const GuitarDetails = ({ user, guitarImages }) => {
           <h2>Model Year: {guitar.year}</h2>
           <p>Finish: {guitar.color}</p>
           {guitar.on_loan === false 
-          ? <p>This guitar is not on loan</p>
+          ? <p></p>
           : <p>This guitar is currently on loan</p>
           }
           {guitar.is_working === true 
-          ? <p>This guitar is currently working</p>
+          ? <p></p>
           : <p>This guitar is currently BUSTED</p>
           }
           <p>{guitar.description}</p>

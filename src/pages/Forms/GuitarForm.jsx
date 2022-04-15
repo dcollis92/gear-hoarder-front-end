@@ -15,7 +15,7 @@ import GuitarInput from './GuitarInput'
 const GuitarForm = (props) => {
   const { id } = useParams()
   const navigate = useNavigate()
-  const [form, setForm] = useState({ isWorking: "false", onLoan: "false" })
+  const [form, setForm] = useState({ isWorking: "false", onLoan: "false", type: "Electric" })
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -58,8 +58,7 @@ const GuitarForm = (props) => {
         onLoan: guitarData.on_loan ? true : false,
       })
     }
-    
-    id ? fetchOne() : setForm({ isWorking: false, onLoan: false })
+    id ? fetchOne() : setForm({ isWorking: false, onLoan: false, type: "Electric" })
     return () => setForm({})
   }, [id])
 
@@ -77,7 +76,10 @@ const GuitarForm = (props) => {
       <section className="form-container">
         <form onSubmit={handleSubmit}>
           <GuitarInput form={form} handleChange={handleChange} />
-          <button type="submit" className="btn submit">Submit</button>
+          <button 
+          type="submit" 
+          className="btn submit"
+          >Submit</button>
         </form>
       </section>
     </>
