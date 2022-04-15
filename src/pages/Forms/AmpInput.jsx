@@ -100,7 +100,6 @@ const AmpInput = ({ form, handleChange }) => {
         onChange={handleChange} id="description" required 
         name="description"  type="text" placeholder="Original UK Production" autoComplete="off" />
     </Form.Group>
- 
     <Form.Group className="mb-3">
       <Form.Check checked={form.isWorking === 'true' ? true : false} 
         onChange={handleChange} id="isWorking" type="checkbox" 
