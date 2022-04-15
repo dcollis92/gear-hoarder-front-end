@@ -79,3 +79,5 @@ Wireframe
 - [ ] Light/Dark Mode 
 - [ ] Further develop Safari + mobile functionality
 - [ ] Any String that is not a color sows up as random color, or we make default gradiesnt for sunburts and custom finishes
+- [ ] Implement cloudinary for users to be able to add their own photos of their gear.
+
