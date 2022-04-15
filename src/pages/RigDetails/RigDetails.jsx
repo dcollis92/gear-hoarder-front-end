@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import './RigDetails.css'
+import './RigDetails.scss'
 
 // Services
 import { getOne, assocGuitar, assocPedal, assocAmp } from '../../services/rigs'
@@ -68,9 +68,8 @@ const RigDetails = ({ rigImages, user }) => {
           <RigActions rig={rig} user={user} />
         </div>
       </section> 
-      {/* - display rig -  */}
       <div className="gear-container">
-        <div className="">
+        <div className="guitars">
           <GuitarCollection
             rig={rig}
             user={user}
@@ -78,7 +77,7 @@ const RigDetails = ({ rigImages, user }) => {
             addGuitarToCollection={addGuitarToCollection}
           /> 
         </div>
-        <div className="">
+        <div className="amps">
           <AmpCollection
             rig={rig}
             user={user}
@@ -86,7 +85,7 @@ const RigDetails = ({ rigImages, user }) => {
             addAmpToCollection={addAmpToCollection}
           /> 
         </div>
-        <div className="">
+        <div className="pedals">
           <PedalCollection
             rig={rig}
             user={user}
