@@ -30,7 +30,7 @@ const GuitarDetails = ({ user, guitarImages }) => {
         </div>
         <div className="guitar-details">
         <h1>{guitar.make} {guitar.model}</h1>
-          <h2>Model Year: {guitar.year}</h2>
+          <p>Model Year: {guitar.year}</p>
           <p>Finish: {guitar.color}</p>
           {guitar.on_loan === false 
           ? <p></p>
