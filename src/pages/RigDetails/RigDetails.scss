@@ -6,6 +6,17 @@
   justify-content: center;
 }
 
+.gear-container  {
+  .guitars, .amps, .pedals {
+    border: solid 2px white;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  div {
+    margin: 5px;
+  }
+}
+
 .rig-img {
   width: 75%;
   max-width: 350px;
@@ -131,24 +142,19 @@
   margin-left: 16px;
 }
 
-.amps h2,
-.pedals h2,
-.guitars h2 {
-  margin: 0;
-  font-size: 3.2rem;
-}
-
-.amps h3,
-.pedals h3,
-.guitars h3 {
-  margin: 10px 0;
-  font-size: var(--font-xl);
-}
-
-.subsection-content p,
-.subsection-content input,
-.subsection-content select {
+.amps, .pedals, .guitars {
+  h2 {
+    margin: 0;
+    font-size: 2.2rem;
+  }
+  h3 {
+    margin: 10px 0;
   font-size: var(--font-l);
+  }
+  p {
+    font-size: 1.5rem;
+
+  }
 }
 
 .subsection-content input,

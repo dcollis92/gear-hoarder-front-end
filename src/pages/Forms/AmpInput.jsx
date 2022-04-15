@@ -6,7 +6,6 @@ const AmpInput = ({ form, handleChange }) => {
         onChange={handleChange} 
         id="type" required 
         name="type">
-        <option value="Select"></option>
         <option value="Head">Head</option>
         <option value="Combo">Combo</option>
         <option value="Cabinet">Cabinet</option>
@@ -32,6 +31,8 @@ const AmpInput = ({ form, handleChange }) => {
         type="text" 
         placeholder="JCM 800" 
         autoComplete="off" />
+      {(form.type !== "Pre-Amp") &&
+      <>
       <label htmlFor="wattage">Wattage</label>
       <input
         value={form.wattage ? form.wattage : ''} 
@@ -41,16 +42,32 @@ const AmpInput = ({ form, handleChange }) => {
         type="text" 
         placeholder="100" 
         autoComplete="off" />
+      <label htmlFor="ohmRating">Ohm Rating</label>
+      <select
+        value={form.ohmRating} 
+        onChange={handleChange} 
+        id="ohmRating" required 
+        name="ohmRating">
+        <option value="4">4</option> 
+        <option value="8">8</option> 
+        <option value="16">16</option> 
+        <option value="Multi">Multi</option> 
+      </select> 
+      </>
+      }  
+      {(form.type !== "Cabinet") &&
+      <>
       <label htmlFor="powerType">Power Type</label>
       <select value={form.powerType} 
         onChange={handleChange}
         id="powerType" required 
         name="powerType">
-          <option value="Select"></option>
         <option value="Tube">Tube</option>
         <option value="Solid State">Solid State</option>
         <option value="Hybrid">Hybrid</option>
       </select> 
+      </>
+      }
       {(form.type === "Combo" || form.type === "Cabinet") &&
       <>
       <label htmlFor="speakerSize">Speaker Size</label>
@@ -84,7 +101,7 @@ const AmpInput = ({ form, handleChange }) => {
         <option value="Multi">Multi</option> 
       </select>
       </>
-      }          
+      }       
       <label htmlFor="color">Color</label>
       <input
         value={form.color ? form.color : ''} 

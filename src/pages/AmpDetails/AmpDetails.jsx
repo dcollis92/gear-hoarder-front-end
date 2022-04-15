@@ -30,23 +30,33 @@ const AmpDetails = ({ user, ampImages }) => {
         </div>
         <div className="amp-details">
           <h1>{amp.make} {amp.model}</h1>
-          <h2>Model Year: {amp.year}</h2>
-          <p>{amp.speaker_amount} x {amp.speaker_size} {amp.type}</p>
-          <p></p>
-          {amp.ohm_rating
-          ? <p>Ohms: {amp.ohm_rating}</p>
-          : <p>Ohms: Unknown</p>
+          {amp.type !== "Cabinet"
+          ? <p>Power: {amp.power_type}</p>
+          : <p></p
           }
+          <p>Model Year: {amp.year}</p>
+          <p>Color: {amp.color}</p>
+          {(amp.type !== "Head" && amp.type !== "Pre-Amp" && amp.type !== "Power")
+          ? <p>{amp.speaker_amount} x {amp.speaker_size} {amp.type}</p>
+          : <p></p>
+          }
+          {amp.type === "Pre-Amp"
+          ? <p></p>
+          :
+          <>
+          <p>Ohms: {amp.ohm_rating}</p>
           <p>Wattage: {amp.wattage}w</p>
+          </>
+          }
           {amp.on_loan === false 
-          ? <p>This amp is not on loan</p>
-          : <p>This amp is currently on loan</p>
+          ? <p>On Loan: No</p>
+          : <p>On Loan: Yes</p>
           }
           {amp.is_working === true 
-          ? <p>This amp is currently working</p>
-          : <p>This amp is currently BUSTED</p>
+          ? <p>Working: Yes</p>
+          : <p>Working: No</p>
           }
-          <p>{amp.description}</p>
+          <p>Description: {amp.description}</p>
           <AmpActions amp={amp} user={user} />
         </div>
       </section>

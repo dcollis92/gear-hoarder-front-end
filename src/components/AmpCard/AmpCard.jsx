@@ -6,14 +6,14 @@ const AmpCard = ({ amp, ampImages }) => {
 
   return (
     <Link to={`/amps/${amp.id}`} className="card">
-    <div className="card-content">
-      <div className="card-img-container">
-        <img className="usr-img" src={ampImages[idx]} 
-        alt={`${amp.make} ${amp.model}`} />
+      <div className="card-content">
+        <div className="card-img-container">
+          <img className="usr-img" src={ampImages[idx]} 
+          alt={`${amp.make} ${amp.model}`} />
+        </div>
+        <h2 className="card-title">{amp.make} {amp.model}</h2>
       </div>
-      <h2 className="card-title">{amp.make} {amp.model}</h2>
-    </div>
-  </Link>
+    </Link>
   )
 }
 
