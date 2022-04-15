@@ -3,7 +3,7 @@ import RigCard from '../../components/RigCard/RigCard'
 
 const RigList = ({rigs, rigImages}) => {
   return (
-    <>
+    <main>
       <section className="page-header">
         <h1>Rigs</h1>
       </section>
@@ -14,7 +14,7 @@ const RigList = ({rigs, rigImages}) => {
         ))}
       </section>
       
-    </>
+    </main>
   )
 }
 

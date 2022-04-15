@@ -3,7 +3,7 @@ import AmpCard from '../../components/AmpCard/AmpCard'
 
 const AmpList = ({amps, ampImages}) => {
   return (
-    <>
+    <div className='page'>
       <section className="page-header">
         <h1>Amps</h1>
       </section>
@@ -13,7 +13,7 @@ const AmpList = ({amps, ampImages}) => {
           ampImages={ampImages} />
         ))}
       </section>
-    </>
+    </div>
   )
 }
 
