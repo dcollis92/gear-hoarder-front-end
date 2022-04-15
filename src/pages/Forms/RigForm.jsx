@@ -1,6 +1,6 @@
 import '../../styles/Form.css'
 import { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 // Services
 import { getOne } from '../../services/rigs'
@@ -13,13 +13,12 @@ import RigInput from './RigInput'
 
 const RigForm = (props) => {
   const { id } = useParams()
-  const navigate = useNavigate()
   const [form, setForm] = useState({})
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    console.log(id);
     id ? props.updateRig(form) : props.addRig(form)
-    navigate(`/rigs`)
   }
 
   const handleChange = (e) => {

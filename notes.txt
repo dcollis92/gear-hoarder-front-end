@@ -1,2 +1,0 @@
-have ternary in amps form to include cabinet with combo
-write ternary in amp to display speakers only if combo and cab

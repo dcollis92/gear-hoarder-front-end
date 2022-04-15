@@ -150,6 +150,8 @@ const App = () => {
   const addRig = async (rigData) => {
     const rig = await rigService.create(rigData)
     setRigs([...rigs, rig])
+    const newId = rig.id
+    navigate(`/rigs/${newId}`)
   }
 
   const addAmp = async (ampData) => {
@@ -172,6 +174,8 @@ const App = () => {
     setRigs(rigs.map((rig) => (
       rig.id === updatedRig.id ? updatedRig : rig
     )))
+    const newId = updatedRig.id
+    navigate(`/rigs/${newId}`)
   }
 
   const updateAmp = async (ampData) => {
