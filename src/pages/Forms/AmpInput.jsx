@@ -56,8 +56,8 @@ const AmpInput = ({ form, handleChange }) => {
       <label htmlFor="speakerSize">Speaker Size</label>
       <input
         value={form.speakerSize ? form.speakerSize : ''} 
-        onChange={handleChange} 
-        id="speakerSize" required 
+        onChange={handleChange}
+        id="speakerSize" required  
         name="speakerSize" 
         type="text" 
         placeholder="12" 
