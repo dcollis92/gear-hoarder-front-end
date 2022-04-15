@@ -1,4 +1,3 @@
-// stylesheet
 import '../../styles/Form.css'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
@@ -8,8 +7,6 @@ import { getOne } from '../../services/pedals'
 
 // Components
 import PedalInput from './PedalInput'
-
-// Image Assets
 
 const PedalForm = (props) => {
   const { id } = useParams()

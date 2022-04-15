@@ -1,6 +1,4 @@
-// stylesheet
 import '../../styles/Form.css'
-
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
@@ -9,8 +7,6 @@ import { getOne } from '../../services/guitars'
 
 // Components
 import GuitarInput from './GuitarInput'
-
-// Image Assets
 
 const GuitarForm = (props) => {
   const { id } = useParams()
