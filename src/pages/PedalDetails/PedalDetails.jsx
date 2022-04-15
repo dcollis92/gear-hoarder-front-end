@@ -30,7 +30,7 @@ const PedalDetails = ({ user, pedalImages }) => {
         </div>
         <div className="pedal-details">
         <h1>{pedal.make} {pedal.model}</h1>
-          <h2>Model Year: {pedal.year}</h2>
+          <p>Model Year: {pedal.year}</p>
           <p>Finish: {pedal.color}</p>
           {pedal.on_loan === false 
           ? <p></p>
