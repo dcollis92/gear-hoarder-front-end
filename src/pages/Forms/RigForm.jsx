@@ -53,7 +53,7 @@ const RigForm = (props) => {
       <section className="form-container">
         <form onSubmit={handleSubmit}>
           <RigInput form={form} handleChange={handleChange} />
-          <button type="submit" className="btn submit">Add Gear</button>
+          <button type="submit" className="btn submit">Create Rig</button>
         </form>
       </section>
     </>
