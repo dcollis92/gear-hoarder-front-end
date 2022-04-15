@@ -87,6 +87,12 @@ main {
   justify-content: center;
 }
 
+.nav-link {
+  font-size: 1.5rem;
+  font-weight: 550;
+  color: black;
+}
+
 
 .btn {
   cursor: pointer;
