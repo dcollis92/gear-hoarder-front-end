@@ -146,6 +146,11 @@ main {
   padding-left: 20px;
 }
 
+
+form, .form-control, .form-select, .submit {
+  font-size: 15px;
+}
+
 @media only screen and (min-width: 768px) {
   /* header {
     top: 0;
