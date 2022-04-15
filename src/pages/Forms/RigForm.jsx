@@ -17,7 +17,6 @@ const RigForm = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(id);
     id ? props.updateRig(form) : props.addRig(form)
   }
 
