@@ -23,7 +23,7 @@ const PedalConfirmation = (props) => {
       <section className="confirmation">
         <h2>Are you sure you want to delete {state?.name}?</h2>
         <Link className="btn submit" to={`/${resource}/${id}`}>Cancel</Link>
-        <button onClick={handleDelete} type="button" className="btn danger">Yes - Delete!</button>
+        <button onClick={handleDelete} type="button" className="btn danger">Delete!</button>
       </section>
     </>
   )
