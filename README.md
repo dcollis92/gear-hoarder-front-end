@@ -10,8 +10,8 @@ Gear Hoarder is a React Built Web App utilizing a Flask API backend. Gear Hoarde
 
 ---
 
-## Flask API
-[Gear Hoarder Flask API](https://github.com/dcollis92/gear-hoarder-back-end)
+## Flask API :telephone:
+- [Gear Hoarder Flask API](https://github.com/dcollis92/gear-hoarder-back-end)
 
 ---
 
@@ -21,7 +21,7 @@ Gear Hoarder is a React Built Web App utilizing a Flask API backend. Gear Hoarde
 
 ---
 
-[Initial wireframe](https://imgur.com/a/Ifr1BJ1)
+- ![Initial wireframe](https://imgur.com/a/Ifr1BJ1)
 
 ---
 
@@ -65,7 +65,7 @@ Gear Hoarder is a React Built Web App utilizing a Flask API backend. Gear Hoarde
 
 ---
 
-## ⚙ Ice Box :icecream:
+## ⚙ Ice Box :icecream: :icecream:
 
 - [ ] Refactor app to display only amps, instruments and pedals belonging to logged in user
 - [ ] Implement ability to view other users rigs

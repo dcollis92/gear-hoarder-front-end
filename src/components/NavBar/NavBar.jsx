@@ -27,28 +27,28 @@ const NavBar = ({ user, handleLogout }) => {
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-2">
                 <Nav.Link href="/rigs">
-                  <i class="fas fa-circle-right"></i>
+                  <i className="fas fa-circle-right"></i>
                   {' '}All Rigs</Nav.Link>
                 <Nav.Link href="/amps">
-                  <i class="fas fa-circle-right"></i>
+                  <i className="fas fa-circle-right"></i>
                   {' '}All Amps</Nav.Link>
                 <Nav.Link href="/guitars">
-                  <i class="fas fa-circle-right"></i>
+                  <i className="fas fa-circle-right"></i>
                   {' '}All Guitars</Nav.Link>
                 <Nav.Link href="/pedals">
-                  <i class="fas fa-circle-right"></i>
+                  <i className="fas fa-circle-right"></i>
                   {' '}All Pedals</Nav.Link>
                 <Nav.Link href="/rigs/new">
-                  <i class="fas fa-circle-plus"></i>
+                  <i className="fas fa-circle-plus"></i>
                   {' '}Add Rig</Nav.Link>  
                 <Nav.Link href="/amps/new">
-                  <i class="fas fa-circle-plus"></i>
+                  <i className="fas fa-circle-plus"></i>
                   {' '}Add Amp</Nav.Link>
                 <Nav.Link href="/guitars/new">
-                  <i class="fas fa-circle-plus"></i>
+                  <i className="fas fa-circle-plus"></i>
                   {' '}Add Guitar</Nav.Link>
                 <Nav.Link href="/pedals/new">
-                  <i class="fas fa-circle-plus"></i>
+                  <i className="fas fa-circle-plus"></i>
                   {' '}Add Pedal</Nav.Link>
                 <Nav.Link href="" onClick={handleLogout}>
                   <i className="fas fa-right-from-bracket"></i>

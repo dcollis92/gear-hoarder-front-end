@@ -73,8 +73,8 @@ const AmpInput = ({ form, handleChange }) => {
       <label htmlFor="speakerSize">Speaker Size</label>
       <input
         value={form.speakerSize ? form.speakerSize : ''} 
-        onChange={handleChange} 
-        id="speakerSize" required 
+        onChange={handleChange}
+        id="speakerSize" required  
         name="speakerSize" 
         type="text" 
         placeholder="12" 
@@ -88,6 +88,18 @@ const AmpInput = ({ form, handleChange }) => {
         type="text" 
         placeholder="2" 
         autoComplete="off" />
+      <label htmlFor="ohmRating">Ohm Rating</label>
+      <select
+        value={form.ohmRating} 
+        onChange={handleChange} 
+        id="ohmRating" required
+        name="ohmRating">
+        <option value="Select"></option>
+        <option value="4">4</option> 
+        <option value="8">8</option> 
+        <option value="16">16</option> 
+        <option value="Multi">Multi</option> 
+      </select>
       </>
       }       
       <label htmlFor="color">Color</label>
