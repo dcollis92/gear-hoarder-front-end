@@ -39,11 +39,11 @@ const AmpDetails = ({ user, ampImages }) => {
           }
           <p>Wattage: {amp.wattage}w</p>
           {amp.on_loan === false 
-          ? <p>This amp is not on loan</p>
+          ? <p></p>
           : <p>This amp is currently on loan</p>
           }
           {amp.is_working === true 
-          ? <p>This amp is currently working</p>
+          ? <p></p>
           : <p>This amp is currently BUSTED</p>
           }
           <p>{amp.description}</p>
