@@ -31,8 +31,10 @@ const AmpDetails = ({ user, ampImages }) => {
         <div className="amp-details">
           <h1>{amp.make} {amp.model}</h1>
           <h2>Model Year: {amp.year}</h2>
-          <p>{amp.speaker_amount} x {amp.speaker_size} {amp.type}</p>
-          <p></p>
+          {amp.type !== "Head"
+          ? <p>{amp.speaker_amount} x {amp.speaker_size} {amp.type}</p>
+          : <p></p>
+          }
           {amp.ohm_rating
           ? <p>Ohms: {amp.ohm_rating}</p>
           : <p>Ohms: Unknown</p>
