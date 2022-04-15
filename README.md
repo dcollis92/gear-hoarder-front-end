@@ -75,4 +75,4 @@ Wireframe
 - [ ] Users can upload photos of their gear
 - [ ] Light/Dark Mode
 - [ ] Further develop Safari + mobile functionality
-- [ ] Any String that is not a color sows up as random color, or we make default gradiesnt for sunburts and custom finishes
+- [ ] Allow users to add color properties for sunburst and custom images
