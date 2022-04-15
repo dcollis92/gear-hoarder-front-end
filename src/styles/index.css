@@ -54,6 +54,8 @@ body {
 }
 
 
+
+
 h2 {
   font-size: 1.5%;
   font-weight: 550;
@@ -137,7 +139,12 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+}
+
+.form-container{
+  display: flex !important;
+  align-items: center;
+  flex-direction: column;
 }
 
 .page-header img {
@@ -159,13 +166,13 @@ form, .form-control, .form-select, .submit {
 }
 
 @media only screen and (min-width: 768px) {
-  /* header {
+  header {
     top: 0;
     display: flex;
     position: sticky;
     flex-direction: row;
     align-items: center;
-  } */
+  }
 
   main {
     max-width: 1920px;
@@ -173,15 +180,6 @@ form, .form-control, .form-select, .submit {
     margin: 0 auto;
   }
 
-
-  /* visual fix to help align logo */
-  .header-logo-container {
-    padding-top: 3px;
-  }
-
-  .header-logo-container {
-    width: 213px;
-  }
 
   
   .page-header img {
