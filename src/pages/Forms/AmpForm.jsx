@@ -72,11 +72,10 @@ const AmpForm = (props) => {
   return (
     <>
       <div className="page-header">
-      {id
+        {id
           ? <h1>Edit Amp</h1>
           : <>
             <h1>Add Amp</h1>
-            {/* <img src={} alt="" /> */} 
             </>
         }
       </div>

@@ -84,7 +84,7 @@ const AmpInput = ({ form, handleChange }) => {
       <Form.Label htmlFor="color">Color</Form.Label>
       <Form.Control value={form.color ? form.color : ''} 
         onChange={handleChange} id="color" required 
-        name="color" type="text" placeholder="Black"  
+        name="color" type="text" color="Black"  
         autoComplete="off" />
     </Form.Group>
     <Form.Group className="mb-3">
