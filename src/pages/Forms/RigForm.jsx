@@ -50,7 +50,7 @@ const RigForm = (props) => {
         </>
         }
       </div>
-      <section className="form-container">
+      <section className="form-container mx-auto">
         <form onSubmit={handleSubmit}>
           <RigInput form={form} handleChange={handleChange} />
           <button type="submit" className="btn submit">Create Rig</button>

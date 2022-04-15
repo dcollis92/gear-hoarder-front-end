@@ -1,18 +1,13 @@
+
 html {
   box-sizing: border-box
 }
 
-/* The Universal Selector */
-*, /* All elements*/
-*::before, /* All ::before pseudo-elements */
-*::after { /* All ::after pseudo-elements */
-  /* height & width will now include border & padding by default
-     but can be over-ridden as needed */
+*::before, 
+*::after { 
   box-sizing: inherit;
 }
 
-/* resets font size to be 62.5% of the user preference - 
-in most browser configurations this will be 10px */
 :root {
   font-size: 62.5%;
 }
@@ -53,7 +48,6 @@ body {
   --borders: #dfe6ed solid 2px;
 }
 
-
 h2 {
   font-size: 1.5%;
   font-weight: 550;
@@ -70,7 +64,6 @@ img {
 main {
   width: 100vw;
 }
-
 
 .nav a {
   font-size: var(--font-xl);
@@ -92,7 +85,6 @@ main {
   font-weight: 550;
   color: black;
 }
-
 
 .btn {
   cursor: pointer;
@@ -137,7 +129,12 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+}
+
+.form-container{
+  display: flex !important;
+  align-items: center;
+  flex-direction: column;
 }
 
 .page-header img {
@@ -153,19 +150,21 @@ main {
   padding-left: 20px;
 }
 
-
-form, .form-control, .form-select, .submit {
+form, 
+.form-control, 
+.form-select, 
+.submit {
   font-size: 15px;
 }
 
 @media only screen and (min-width: 768px) {
-  /* header {
+  header {
     top: 0;
     display: flex;
     position: sticky;
     flex-direction: row;
     align-items: center;
-  } */
+  }
 
   main {
     max-width: 1920px;
@@ -173,17 +172,6 @@ form, .form-control, .form-select, .submit {
     margin: 0 auto;
   }
 
-
-  /* visual fix to help align logo */
-  .header-logo-container {
-    padding-top: 3px;
-  }
-
-  .header-logo-container {
-    width: 213px;
-  }
-
-  
   .page-header img {
     height: 50px;
     margin-left:20px;

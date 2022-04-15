@@ -1,11 +1,14 @@
 .form-container {
-  display: flex;
+  display: flex !important;
   width: 100%;
   height: 100%;
+  max-width: 80vw;
   padding: 0px 25px;
   font-family: inherit;
-  flex-direction: column;
+  align-items: center !important;
+  flex-direction: column !important;
 }
+
 
 .form-container > section {
   width: 100%;
