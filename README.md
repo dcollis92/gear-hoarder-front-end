@@ -1,6 +1,11 @@
 # GEAR HOARDER :guitar: 
 
+![Gear Hoarder Logo](https://i.imgur.com/LnkMNxE.jpg)
+
 Gear Hoarder is a React Built Web App utilizing a Flask API backend. Gear Hoarder is an app for musicians who can't get enough gear. Users can add guitars, amps, and pedals to their profile, and create customized rigs from their collection. 
+
+Wireframe
+![Wire Frame](https://i.imgur.com/wSNWtjO.png)
 
 ---
 
