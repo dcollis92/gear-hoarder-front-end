@@ -63,6 +63,8 @@ Wireframe
 
 ## ⚙ Credits
 
+- [Attributions](https://github.com/dcollis92/gear-hoarder-front-end/blob/main/attributions.md) can be found here
+
 - Inspired by [Cat Collector](https://github.com/whlong1/cat-collector-react) by the incomparable [Hunter Long](https://github.com/whlong1) 
 
 ---
