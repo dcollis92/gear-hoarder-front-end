@@ -83,6 +83,18 @@ const NavBar = ({ user, handleLogout }) => {
                 <Nav.Link href="/signup">
                   <i className="fas fa-user-plus"></i>
                   {' '}Sign Up</Nav.Link>
+                  <Nav.Link href="/rigs">
+                  <i className="fas fa-circle-right"></i>
+                  {' '}Rigs</Nav.Link>
+                <Nav.Link href="/amps">
+                  <i className="fas fa-circle-right"></i>
+                  {' '}Amps</Nav.Link>
+                <Nav.Link href="/guitars">
+                  <i className="fas fa-circle-right"></i>
+                  {' '}Guitars</Nav.Link>
+                <Nav.Link href="/pedals">
+                  <i className="fas fa-circle-right"></i>
+                  {' '}Pedals</Nav.Link>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
