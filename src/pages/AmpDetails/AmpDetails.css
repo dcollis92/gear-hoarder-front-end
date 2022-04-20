@@ -25,11 +25,6 @@
   width: 98%;
 }
 
-.amp-actions {
-  margin-top: 20px;
-}
-
-
 @media only screen and (max-width: 600px) {
   .amp-details-container {
     display: flex;
