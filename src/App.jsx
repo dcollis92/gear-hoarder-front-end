@@ -277,28 +277,28 @@ const App = () => {
             // </ProtectedRoute>
           } />
         <Route path="/rigs/:id" element={
-          <ProtectedRoute user={user}>
+          // <ProtectedRoute user={user}>
             <RigDetails rigImages={rigImages} 
               user={user} />
-          </ProtectedRoute>
+          // </ProtectedRoute>
         } />
         <Route path="/amps/:id" element={
-          <ProtectedRoute user={user}>
+          // <ProtectedRoute user={user}>
             <AmpDetails ampImages={ampImages} 
               user={user} />
-          </ProtectedRoute>
+          // </ProtectedRoute>
         } />
         <Route path="/guitars/:id" element={
-          <ProtectedRoute user={user}>
+          // <ProtectedRoute user={user}>
             <GuitarDetails guitarImages={guitarImages} 
               user={user} />
-          </ProtectedRoute>
+          // </ProtectedRoute>
         } />
         <Route path="/pedals/:id" element={
-          <ProtectedRoute user={user}>
+          // <ProtectedRoute user={user}>
             <PedalDetails pedalImages={pedalImages} 
               user={user} />
-          </ProtectedRoute>
+          // </ProtectedRoute>
         } />
         <Route path="/rigs/new" element={
           <ProtectedRoute user={user}>
