@@ -77,12 +77,6 @@ const NavBar = ({ user, handleLogout }) => {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-2">
-                <Nav.Link href="/login">
-                  <i className="fas fa-key"></i>
-                  {' '}Log In</Nav.Link>
-                <Nav.Link href="/signup">
-                  <i className="fas fa-user-plus"></i>
-                  {' '}Sign Up</Nav.Link>
                   <Nav.Link href="/rigs">
                   <i className="fas fa-circle-right"></i>
                   {' '}Rigs</Nav.Link>
@@ -95,6 +89,12 @@ const NavBar = ({ user, handleLogout }) => {
                 <Nav.Link href="/pedals">
                   <i className="fas fa-circle-right"></i>
                   {' '}Pedals</Nav.Link>
+                  <Nav.Link href="/login">
+                  <i className="fas fa-key"></i>
+                  {' '}Log In</Nav.Link>
+                <Nav.Link href="/signup">
+                  <i className="fas fa-user-plus"></i>
+                  {' '}Sign Up</Nav.Link>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
