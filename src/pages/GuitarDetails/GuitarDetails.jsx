@@ -42,12 +42,7 @@ const GuitarDetails = ({ user, guitarImages }) => {
           : <p>Working: No</p>
           }
           <p>Description: {guitar.description}</p>
-          
-          {user 
-          ? <GuitarActions guitar={guitar} user={user} />
-          : <></>
-          }
-          <button className="btn danger" onClick={() => navigate(`/guitars`)}>Return</button>
+          <GuitarActions guitar={guitar} user={user} />
         </div>
       </section>
     </>
