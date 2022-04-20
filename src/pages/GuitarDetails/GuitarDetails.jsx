@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import './GuitarDetails.css'
 
 // Services
@@ -10,6 +10,7 @@ import GuitarActions from './components/GuitarActions'
 import GuitarCard from '../../components/GuitarCard/GuitarCard'
 
 const GuitarDetails = ({ user, guitarImages }) => {
+  const navigate = useNavigate()
   const { id } = useParams()
   const [guitar, setGuitar] = useState(null)
 
@@ -41,7 +42,12 @@ const GuitarDetails = ({ user, guitarImages }) => {
           : <p>Working: No</p>
           }
           <p>Description: {guitar.description}</p>
-          <GuitarActions guitar={guitar} user={user} />
+          
+          {user 
+          ? <GuitarActions guitar={guitar} user={user} />
+          : <></>
+          }
+          <button className="btn danger" onClick={() => navigate(`/guitars`)}>Return</button>
         </div>
       </section>
     </>
