@@ -25,11 +25,6 @@
   width: 98%;
 }
 
-.pedal-actions {
-  margin-top: 20px;
-}
-
-
 @media only screen and (max-width: 600px) {
   .pedal-details-container {
     display: flex;

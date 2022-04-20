@@ -25,10 +25,6 @@
   width: 98%;
 }
 
-.guitar-actions {
-  margin-top: 20px;
-}
-
 
 @media only screen and (max-width: 600px) {
   .guitar-details-container {
