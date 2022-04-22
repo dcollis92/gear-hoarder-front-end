@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
-import { getOne } from '../../services/profileService'
-import * as authService from '../../services/authService'
+import { useParams } from 'react-router-dom'
 import './ProfileDetails.css'
+
+import { getOne } from '../../services/profileService'
 
 const ProfileDetails = (props) => {
   const { id } = useParams()
@@ -26,9 +26,6 @@ const ProfileDetails = (props) => {
 
         </div>
       </section>
-    
-
-
     </>
   )
 }
