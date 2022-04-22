@@ -8,7 +8,7 @@ async function getAllProfiles() {
   return await res.json()
 }
 
-async function getProfile(id) {
+async function getOne(id) {
   const res = await fetch(`${BASE_URL}/${id}`, {
     headers: { Authorization:
     `Bearer ${tokenService.getToken()}` },
@@ -16,5 +16,5 @@ async function getProfile(id) {
   return await res.json()
 }
 
-export { getAllProfiles, getProfile }
+export { getAllProfiles, getOne }
 
