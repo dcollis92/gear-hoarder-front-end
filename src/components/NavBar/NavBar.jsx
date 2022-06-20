@@ -1,4 +1,3 @@
-// import { NavLink } from 'react-router-dom'
 import './NavBar.scss';
 import { Nav, Navbar, Container, Offcanvas }  from 'react-bootstrap';
 import Logo from "../../assets/logos/Gear-Hoarder.svg"

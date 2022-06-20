@@ -1,8 +1,5 @@
 import { useNavigate, useLocation, useParams, Link } from 'react-router-dom'
 
-// Image Assets
-
-
 const AmpConfirmation = (props) => {
   const { id } = useParams()
   const { state } = useLocation()
