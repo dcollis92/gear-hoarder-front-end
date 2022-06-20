@@ -5,11 +5,9 @@ import { useParams } from 'react-router-dom'
 // Services
 import { getOne } from '../../services/rigs'
 
-
 // Components
 import RigInput from './RigInput'
 
-// Image Assets
 
 const RigForm = (props) => {
   const { id } = useParams()

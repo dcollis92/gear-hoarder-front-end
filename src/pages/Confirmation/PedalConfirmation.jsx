@@ -1,7 +1,5 @@
 import { useNavigate, useLocation, useParams, Link } from 'react-router-dom'
 
-// Image Assets
-
 
 const PedalConfirmation = (props) => {
   const { id } = useParams()
