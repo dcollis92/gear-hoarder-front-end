@@ -253,52 +253,36 @@ const App = () => {
         <Route path="/profiles" element={user ? <Profiles /> : <Navigate to="/login" />}
         />
         <Route path="/rigs" element={
-            // <ProtectedRoute user={user}>
               <RigList rigs={rigs} 
               rigImages={rigImages} />
-            // </ProtectedRoute>
           } />
         <Route path="/amps" element={
-            // <ProtectedRoute user={user}>
               <AmpList amps={amps} 
               ampImages={ampImages} />
-            // </ProtectedRoute>
           } />
         <Route path="/guitars" element={
-            // <ProtectedRoute user={user}>
               <GuitarList guitars={guitars} 
               guitarImages={guitarImages} />
-            // </ProtectedRoute>
           } /> 
         <Route path="/pedals" element={
-            // <ProtectedRoute user={user}>
               <PedalList pedals={pedals} 
                 pedalImages={pedalImages} />
-            // </ProtectedRoute>
           } />
         <Route path="/rigs/:id" element={
-          // <ProtectedRoute user={user}>
             <RigDetails rigImages={rigImages} 
               user={user} />
-          // </ProtectedRoute>
         } />
         <Route path="/amps/:id" element={
-          // <ProtectedRoute user={user}>
             <AmpDetails ampImages={ampImages} 
               user={user} />
-          // </ProtectedRoute>
         } />
         <Route path="/guitars/:id" element={
-          // <ProtectedRoute user={user}>
             <GuitarDetails guitarImages={guitarImages} 
               user={user} />
-          // </ProtectedRoute>
         } />
         <Route path="/pedals/:id" element={
-          // <ProtectedRoute user={user}>
             <PedalDetails pedalImages={pedalImages} 
               user={user} />
-          // </ProtectedRoute>
         } />
         <Route path="/rigs/new" element={
           <ProtectedRoute user={user}>
