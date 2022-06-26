@@ -15,7 +15,6 @@
   font-size: var(--font-reg);
 }
 
-
 .usr-img {
   width: 100%;
   border-radius: var(--card-border-radius);
@@ -24,7 +23,6 @@
 .guitar-details {
   width: 98%;
 }
-
 
 @media only screen and (max-width: 600px) {
   .guitar-details-container {

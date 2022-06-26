@@ -1,7 +1,7 @@
-import './PedalList.css'
-import PedalCard from '../../components/PedalCard/PedalCard'
+import "./PedalList.css";
+import PedalCard from "../../components/PedalCard/PedalCard";
 
-const PedalList = ({pedals, pedalImages}) => {
+const PedalList = ({ pedals, pedalImages }) => {
   return (
     <>
       <section className="page-header">
@@ -9,12 +9,11 @@ const PedalList = ({pedals, pedalImages}) => {
       </section>
       <section className="pedal-card-container">
         {pedals.map((pedal) => (
-          <PedalCard key={pedal.id} pedal={pedal} 
-          pedalImages={pedalImages} />
+          <PedalCard key={pedal.id} pedal={pedal} pedalImages={pedalImages} />
         ))}
       </section>
     </>
-  )
-}
+  );
+};
 
-export default PedalList
+export default PedalList;

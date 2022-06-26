@@ -40,7 +40,7 @@
 }
 
 @media only screen and (min-width: 560px) {
-  .amp-card  {
+  .amp-card {
     width: 250px;
     height: 250px;
     padding: 15px;
@@ -55,7 +55,7 @@
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   }
-  .amp-card  {
+  .amp-card {
     width: 200px;
     height: 200px;
     padding: 15px;
@@ -70,7 +70,7 @@
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-  .amp-card  {
+  .amp-card {
     width: 280px;
     height: 280px;
     padding: 15px;
