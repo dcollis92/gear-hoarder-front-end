@@ -16,7 +16,7 @@ const PedalCollection = ({ rig, pedals, user, addPedalToCollection }) => {
           <p className="no-pedals">{rig.name} doesn't have any pedals</p>
         )}
       </div>
-      {user.id === rig.profile_id && (
+      {user?.id === rig.profile_id && (
         <>
           <h3>Available pedals</h3>
           <div className="subsection-content">

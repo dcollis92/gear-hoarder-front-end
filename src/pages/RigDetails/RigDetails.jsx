@@ -12,6 +12,7 @@ import AmpCollection from "./components/AmpCollection";
 import PedalCollection from "./components/PedalCollection";
 
 const RigDetails = ({ rigImages, user }) => {
+  console.log(user)
   const { id } = useParams();
   const [rig, setRig] = useState(null);
   const [availableGuitars, setAvailableGuitars] = useState([]);
@@ -68,7 +69,9 @@ const RigDetails = ({ rigImages, user }) => {
         <div className="rig-details">
           <h1>{rig.name}</h1>
           <p>{rig.description}</p>
-          <RigActions rig={rig} user={user} />
+          {user && 
+            <RigActions rig={rig} user={user} />
+          }
         </div>
       </section>
 
