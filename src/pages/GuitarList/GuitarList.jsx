@@ -1,7 +1,7 @@
-import './GuitarList.css'
-import GuitarCard from '../../components/GuitarCard/GuitarCard'
+import "./GuitarList.css";
+import GuitarCard from "../../components/GuitarCard/GuitarCard";
 
-const GuitarList = ({guitars, guitarImages}) => {
+const GuitarList = ({ guitars, guitarImages }) => {
   return (
     <>
       <section className="page-header">
@@ -9,12 +9,15 @@ const GuitarList = ({guitars, guitarImages}) => {
       </section>
       <section className="guitar-card-container">
         {guitars.map((guitar) => (
-          <GuitarCard key={guitar.id} guitar={guitar} 
-          guitarImages={guitarImages} />
+          <GuitarCard
+            key={guitar.id}
+            guitar={guitar}
+            guitarImages={guitarImages}
+          />
         ))}
       </section>
     </>
-  )
-}
+  );
+};
 
-export default GuitarList
+export default GuitarList;

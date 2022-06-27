@@ -1,8 +1,7 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const RigCard = ({ rig, rigImages }) => {
-
-  let idx = Math.floor(Math.random() * (rigImages.length))
+  let idx = Math.floor(Math.random() * rigImages.length);
 
   return (
     <Link to={`/rigs/${rig.id}`} className="card">
@@ -13,7 +12,7 @@ const RigCard = ({ rig, rigImages }) => {
         <h2 className="card-title">{rig.name}</h2>
       </div>
     </Link>
-  )
-}
+  );
+};
 
-export default RigCard
+export default RigCard;

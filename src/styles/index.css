@@ -1,10 +1,9 @@
-
 html {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
-*::before, 
-*::after { 
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -21,9 +20,9 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   letter-spacing: 0.07em;
   min-height: 100vh;
   --font-l: 1.8rem;
@@ -31,7 +30,7 @@ body {
   --font-reg: 1.6rem;
   --font-med: 1.7rem;
   --font-xxl: 3.6rem;
-  background-color:#0d1117;
+  background-color: #0d1117;
   color: #dfe6ed;
   --card-border-radius: 6px;
   --warn: rgb(0, 0, 0);
@@ -124,7 +123,7 @@ main {
   justify-content: center;
 }
 
-.form-container{
+.form-container {
   display: flex !important;
   align-items: center;
   flex-direction: column;
@@ -132,7 +131,7 @@ main {
 
 .page-header img {
   height: 40px;
-  margin-left:15px;
+  margin-left: 15px;
 }
 
 .page-header img:first-of-type {
@@ -143,9 +142,9 @@ main {
   padding-left: 20px;
 }
 
-form, 
-.form-control, 
-.form-select, 
+form,
+.form-control,
+.form-select,
 .submit {
   font-size: 15px;
 }
@@ -167,17 +166,16 @@ form,
 
   .page-header img {
     height: 50px;
-    margin-left:20px;
+    margin-left: 20px;
   }
-  
+
   .page-header img:first-of-type {
     margin-left: 25px;
   }
-
 }
 
 @media only screen and (min-width: 1024px) {
-    main {
-      min-height: calc(100vh - 55px);
-    }
-  } 
+  main {
+    min-height: calc(100vh - 55px);
+  }
+}

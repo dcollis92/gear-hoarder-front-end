@@ -13,8 +13,13 @@
   border: var(--borders);
   color: var(--text-color);
   box-shadow: var(--card-box-shadow);
-  background: rgb(255,255,255);
-  background: linear-gradient(145deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 44%, rgb(250, 251, 252) 100%);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 44%,
+    rgb(250, 251, 252) 100%
+  );
 }
 
 .card-content {
@@ -23,7 +28,7 @@
 }
 
 .card-content:hover {
-  color: var(--link-hover-color)
+  color: var(--link-hover-color);
 }
 
 .card h2 {
@@ -59,7 +64,7 @@
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
-  
+
   .card {
     width: 250px;
   }

@@ -6,8 +6,10 @@
   justify-content: center;
 }
 
-.gear-container  {
-  .guitars, .amps, .pedals {
+.gear-container {
+  .guitars,
+  .amps,
+  .pedals {
     border: solid 2px white;
     padding: 5px;
     border-radius: 5px;
@@ -76,9 +78,12 @@
   border: 1px solid rgb(200, 200, 200);
 }
 
-.no-amps, .all-amps,
-.no-pedals, .all-pedals,
-.no-guitars, .all-guitars {
+.no-amps,
+.all-amps,
+.no-pedals,
+.all-pedals,
+.no-guitars,
+.all-guitars {
   margin: 0;
   font-weight: bold;
   font-size: var(--font-l);
@@ -96,7 +101,6 @@
 .all-guitars {
   color: var(--submit);
 }
-
 
 .rig-details h1 {
   margin: 15px 0 3px;
@@ -120,10 +124,10 @@
   margin: 5px 0;
 }
 
-.gear-container  > section {
+.gear-container > section {
   width: 100%;
   padding: 14px;
-  display: flex; 
+  display: flex;
   min-width: 360px;
   margin-bottom: 20px;
   flex-direction: column;
@@ -142,18 +146,19 @@
   margin-left: 16px;
 }
 
-.amps, .pedals, .guitars {
+.amps,
+.pedals,
+.guitars {
   h2 {
     margin: 0;
     font-size: 2.2rem;
   }
   h3 {
     margin: 10px 0;
-  font-size: var(--font-l);
+    font-size: var(--font-l);
   }
   p {
     font-size: 1.5rem;
-
   }
 }
 
@@ -172,7 +177,7 @@
 .guitar-container a,
 .pedal-container a,
 .amp-container a {
-  color: #DFE6ED;
+  color: #dfe6ed;
   text-decoration: none;
 }
 
@@ -215,13 +220,13 @@
     justify-content: center;
   }
 
-  .gear-container  > section {
+  .gear-container > section {
     width: 45%;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .gear-container  {
+  .gear-container {
     padding: 0 40px;
   }
 }
