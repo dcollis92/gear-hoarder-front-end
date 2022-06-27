@@ -14,7 +14,7 @@ const AmpCollection = ({ rig, amps, user, addAmpToCollection }) => {
           <p className="no-amps">{rig.name} doesn't have any amps</p>
         )}
       </div>
-      {user.id === rig.profile_id && (
+      {user?.id === rig.profile_id && (
         <>
           <h3>Available amps</h3>
           <div className="subsection-content">

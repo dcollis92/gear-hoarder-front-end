@@ -17,7 +17,7 @@ const GuitarCollection = ({ rig, guitars, user, addGuitarToCollection }) => {
         )}
       </div>
 
-      {user.id === rig.profile_id && (
+      {user?.id === rig.profile_id && (
         <>
           <h3>Available guitars</h3>
           <div className="subsection-content">
